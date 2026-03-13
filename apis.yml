@@ -1,0 +1,67 @@
+name: AWS Shield API
+description: AWS Shield is a managed Distributed Denial of Service (DDoS) protection service that safeguards applications running on AWS. It provides always-on detection and automatic inline mitigations that minimize application downtime and latency, with two tiers of protection - Shield Standard for automatic defense against common attacks and Shield Advanced for enhanced detection and 24/7 access to the DDoS Response Team.
+image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+url: https://aws.amazon.com/shield/
+created: '2024-01-15'
+modified: '2026-03-13'
+apis:
+- name: AWS Shield API
+  description: >-
+    The AWS Shield API provides programmatic access to manage DDoS protection
+    for your AWS resources. It enables developers to create and manage
+    protections, subscribe to Shield Advanced, configure emergency contacts,
+    view attack details and statistics, and manage protection groups for
+    coordinated defense across multiple resources.
+  image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+  humanURL: https://aws.amazon.com/shield/
+  baseURL: https://shield.amazonaws.com
+  tags:
+  - Security
+  - DDoS Protection
+  - Networking
+  - AWS
+  properties:
+  - type: Documentation
+    url: https://docs.aws.amazon.com/waf/latest/developerguide/shield-chapter.html
+  - type: OpenAPI
+    url: openapi/amazon-shield-openapi.yml
+  - type: Pricing
+    url: https://aws.amazon.com/shield/pricing/
+  - type: Getting Started
+    url: https://aws.amazon.com/shield/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/shield/faqs/
+common:
+- type: Portal
+  url: https://aws.amazon.com/
+- type: Website
+  url: https://aws.amazon.com/shield/
+- type: Documentation
+  url: https://docs.aws.amazon.com/waf/latest/developerguide/shield-chapter.html
+- type: Terms of Service
+  url: https://aws.amazon.com/service-terms/
+- type: Privacy Policy
+  url: https://aws.amazon.com/privacy/
+- type: Support
+  url: https://aws.amazon.com/premiumsupport/
+- type: GitHub Organization
+  url: https://github.com/aws
+- type: Console
+  url: https://console.aws.amazon.com/wafv2/shieldv2
+- type: Sign Up
+  url: https://signin.aws.amazon.com/signup?request_type=register
+- type: Login
+  url: https://aws.amazon.com/console/
+- type: Status
+  url: https://health.aws.amazon.com/health/status
+- type: Contact
+  url: https://aws.amazon.com/contact-us/
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+  url: https://apievangelist.com
+tags:
+- Security
+- DDoS Protection
+- Networking
+- AWS

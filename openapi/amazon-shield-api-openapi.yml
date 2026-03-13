@@ -1,0 +1,286 @@
+openapi: 3.1.0
+info:
+  title: Amazon Shield REST API
+  description: >-
+    AWS Shield is a managed DDoS protection service that safeguards applications
+    running on AWS. This API enables management of DDoS protections, protection
+    groups, subscriptions, attack details, and emergency engagement settings.
+  version: '2016-06-02'
+  contact:
+    name: AWS Support
+    url: https://aws.amazon.com/premiumsupport/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: https://aws.amazon.com/service-terms/
+  x-logo:
+    url: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+externalDocs:
+  description: AWS Shield API Reference
+  url: https://docs.aws.amazon.com/waf/latest/DDOSAPIReference/Welcome.html
+servers:
+  - url: https://shield.us-east-1.amazonaws.com
+    description: AWS Shield global endpoint (us-east-1 only)
+security:
+  - sigv4: []
+paths:
+  /:
+    post:
+      summary: Create Protection
+      description: Enables AWS Shield Advanced for a specific AWS resource.
+      operationId: createProtection
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              $ref: '#/components/schemas/CreateProtectionRequest'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateProtectionResponse'
+      x-amz-target: AWSShield_20160616.CreateProtection
+  /#ListProtections:
+    post:
+      summary: List Protections
+      description: Lists all Protection objects for the account.
+      operationId: listProtections
+      requestBody:
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              $ref: '#/components/schemas/ListProtectionsRequest'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListProtectionsResponse'
+      x-amz-target: AWSShield_20160616.ListProtections
+  /#DescribeProtection:
+    post:
+      summary: Describe Protection
+      description: Lists the details of a Protection object.
+      operationId: describeProtection
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              $ref: '#/components/schemas/DescribeProtectionRequest'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DescribeProtectionResponse'
+      x-amz-target: AWSShield_20160616.DescribeProtection
+  /#DescribeAttack:
+    post:
+      summary: Describe Attack
+      description: Describes the details of a DDoS attack that is detected.
+      operationId: describeAttack
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              $ref: '#/components/schemas/DescribeAttackRequest'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DescribeAttackResponse'
+      x-amz-target: AWSShield_20160616.DescribeAttack
+  /#CreateSubscription:
+    post:
+      summary: Create Subscription
+      description: Activates AWS Shield Advanced for an account.
+      operationId: createSubscription
+      responses:
+        '200':
+          description: Successful response
+      x-amz-target: AWSShield_20160616.CreateSubscription
+  /#DescribeSubscription:
+    post:
+      summary: Describe Subscription
+      description: Provides details about the AWS Shield Advanced subscription for an account.
+      operationId: describeSubscription
+      responses:
+        '200':
+          description: Successful response
+      x-amz-target: AWSShield_20160616.DescribeSubscription
+  /#CreateProtectionGroup:
+    post:
+      summary: Create Protection Group
+      description: Creates a grouping of protected resources so they can be handled as a collective.
+      operationId: createProtectionGroup
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              $ref: '#/components/schemas/CreateProtectionGroupRequest'
+      responses:
+        '200':
+          description: Successful response
+      x-amz-target: AWSShield_20160616.CreateProtectionGroup
+components:
+  securitySchemes:
+    sigv4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4
+  schemas:
+    CreateProtectionRequest:
+      type: object
+      required:
+        - Name
+        - ResourceArn
+      properties:
+        Name:
+          type: string
+        ResourceArn:
+          type: string
+        Tags:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tag'
+    CreateProtectionResponse:
+      type: object
+      properties:
+        ProtectionId:
+          type: string
+    ListProtectionsRequest:
+      type: object
+      properties:
+        NextToken:
+          type: string
+        MaxResults:
+          type: integer
+    ListProtectionsResponse:
+      type: object
+      properties:
+        Protections:
+          type: array
+          items:
+            $ref: '#/components/schemas/Protection'
+        NextToken:
+          type: string
+    DescribeProtectionRequest:
+      type: object
+      properties:
+        ProtectionId:
+          type: string
+        ResourceArn:
+          type: string
+    DescribeProtectionResponse:
+      type: object
+      properties:
+        Protection:
+          $ref: '#/components/schemas/Protection'
+    DescribeAttackRequest:
+      type: object
+      required:
+        - AttackId
+      properties:
+        AttackId:
+          type: string
+    DescribeAttackResponse:
+      type: object
+      properties:
+        Attack:
+          $ref: '#/components/schemas/AttackDetail'
+    CreateProtectionGroupRequest:
+      type: object
+      required:
+        - ProtectionGroupId
+        - Aggregation
+        - Pattern
+      properties:
+        ProtectionGroupId:
+          type: string
+        Aggregation:
+          type: string
+          enum: [SUM, MEAN, MAX]
+        Pattern:
+          type: string
+          enum: [ALL, ARBITRARY, BY_RESOURCE_TYPE]
+        ResourceType:
+          type: string
+          enum: [CLOUDFRONT_DISTRIBUTION, ROUTE_53_HOSTED_ZONE, ELASTIC_IP_ALLOCATION, CLASSIC_LOAD_BALANCER, APPLICATION_LOAD_BALANCER, GLOBAL_ACCELERATOR]
+        Members:
+          type: array
+          items:
+            type: string
+    Protection:
+      type: object
+      properties:
+        Id:
+          type: string
+        Name:
+          type: string
+        ResourceArn:
+          type: string
+        HealthCheckIds:
+          type: array
+          items:
+            type: string
+        ProtectionArn:
+          type: string
+    AttackDetail:
+      type: object
+      properties:
+        AttackId:
+          type: string
+        ResourceArn:
+          type: string
+        StartTime:
+          type: string
+          format: date-time
+        EndTime:
+          type: string
+          format: date-time
+        AttackCounters:
+          type: array
+          items:
+            $ref: '#/components/schemas/SummarizedCounter'
+        Mitigations:
+          type: array
+          items:
+            $ref: '#/components/schemas/Mitigation'
+    SummarizedCounter:
+      type: object
+      properties:
+        Name:
+          type: string
+        Max:
+          type: number
+        Average:
+          type: number
+        Sum:
+          type: number
+        N:
+          type: integer
+        Unit:
+          type: string
+    Mitigation:
+      type: object
+      properties:
+        MitigationName:
+          type: string
+    Tag:
+      type: object
+      properties:
+        Key:
+          type: string
+        Value:
+          type: string

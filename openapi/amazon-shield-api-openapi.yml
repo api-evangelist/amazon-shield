@@ -26,7 +26,7 @@ security:
 paths:
   /:
     post:
-      summary: Create Protection
+      summary: Amazon Shield Create Protection
       description: Enables AWS Shield Advanced for a specific AWS resource.
       operationId: createProtection
       requestBody:
@@ -45,7 +45,7 @@ paths:
       x-amz-target: AWSShield_20160616.CreateProtection
   /#ListProtections:
     post:
-      summary: List Protections
+      summary: Amazon Shield List Protections
       description: Lists all Protection objects for the account.
       operationId: listProtections
       requestBody:
@@ -63,7 +63,7 @@ paths:
       x-amz-target: AWSShield_20160616.ListProtections
   /#DescribeProtection:
     post:
-      summary: Describe Protection
+      summary: Amazon Shield Describe Protection
       description: Lists the details of a Protection object.
       operationId: describeProtection
       requestBody:
@@ -82,7 +82,7 @@ paths:
       x-amz-target: AWSShield_20160616.DescribeProtection
   /#DescribeAttack:
     post:
-      summary: Describe Attack
+      summary: Amazon Shield Describe Attack
       description: Describes the details of a DDoS attack that is detected.
       operationId: describeAttack
       requestBody:
@@ -101,7 +101,7 @@ paths:
       x-amz-target: AWSShield_20160616.DescribeAttack
   /#CreateSubscription:
     post:
-      summary: Create Subscription
+      summary: Amazon Shield Create Subscription
       description: Activates AWS Shield Advanced for an account.
       operationId: createSubscription
       responses:
@@ -110,7 +110,7 @@ paths:
       x-amz-target: AWSShield_20160616.CreateSubscription
   /#DescribeSubscription:
     post:
-      summary: Describe Subscription
+      summary: Amazon Shield Describe Subscription
       description: Provides details about the AWS Shield Advanced subscription for an account.
       operationId: describeSubscription
       responses:
@@ -119,7 +119,7 @@ paths:
       x-amz-target: AWSShield_20160616.DescribeSubscription
   /#CreateProtectionGroup:
     post:
-      summary: Create Protection Group
+      summary: Amazon Shield Create Protection Group
       description: Creates a grouping of protected resources so they can be handled as a collective.
       operationId: createProtectionGroup
       requestBody:

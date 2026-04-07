@@ -61,6 +61,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/ListProtectionsResponse'
       x-amz-target: AWSShield_20160616.ListProtections
+      tags:
+        - '#ListProtections'
   /#DescribeProtection:
     post:
       summary: Amazon Shield Describe Protection
@@ -80,6 +82,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/DescribeProtectionResponse'
       x-amz-target: AWSShield_20160616.DescribeProtection
+      tags:
+        - '#DescribeProtection'
   /#DescribeAttack:
     post:
       summary: Amazon Shield Describe Attack
@@ -99,6 +103,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/DescribeAttackResponse'
       x-amz-target: AWSShield_20160616.DescribeAttack
+      tags:
+        - '#DescribeAttack'
   /#CreateSubscription:
     post:
       summary: Amazon Shield Create Subscription
@@ -108,6 +114,8 @@ paths:
         '200':
           description: Successful response
       x-amz-target: AWSShield_20160616.CreateSubscription
+      tags:
+        - '#CreateSubscription'
   /#DescribeSubscription:
     post:
       summary: Amazon Shield Describe Subscription
@@ -117,6 +125,8 @@ paths:
         '200':
           description: Successful response
       x-amz-target: AWSShield_20160616.DescribeSubscription
+      tags:
+        - '#DescribeSubscription'
   /#CreateProtectionGroup:
     post:
       summary: Amazon Shield Create Protection Group
@@ -132,6 +142,8 @@ paths:
         '200':
           description: Successful response
       x-amz-target: AWSShield_20160616.CreateProtectionGroup
+      tags:
+        - '#CreateProtectionGroup'
 components:
   securitySchemes:
     sigv4:
@@ -284,3 +296,10 @@ components:
           type: string
         Value:
           type: string
+tags:
+  - name: '#CreateProtectionGroup'
+  - name: '#CreateSubscription'
+  - name: '#DescribeAttack'
+  - name: '#DescribeProtection'
+  - name: '#DescribeSubscription'
+  - name: '#ListProtections'

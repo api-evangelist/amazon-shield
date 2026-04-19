@@ -1,0 +1,48 @@
+naftiko: 1.0.0-alpha1
+info:
+  label: Amazon Shield Operations
+  description: Workflow capability for Amazon Shield. Enables automation of Amazon Shield resources for cloud operations teams.
+  tags:
+  - Amazon Shield
+  - AWS
+  - Cloud Operations
+  created: '2026-04-19'
+  modified: '2026-04-19'
+binds:
+- namespace: env
+  keys:
+    AWS_ACCESS_KEY: AWS_ACCESS_KEY
+    AWS_SECRET_KEY: AWS_SECRET_KEY
+capability:
+  consumes:
+  - import: amazon-shield
+    location: ./shared/amazon-shield.yaml
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: amazon-shield-api
+    description: Unified REST API for Amazon Shield operations.
+    resources:
+    - path: /v1/resources
+      name: resources
+      description: Amazon Shield resources
+      operations:
+      - method: GET
+        name: list-resources
+        description: List Amazon Shield resources
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: amazon-shield-mcp
+    transport: http
+    description: MCP server for AI-assisted Amazon Shield operations.
+    tools:
+    - name: list-amazon-shield-resources
+      description: List Amazon Shield resources
+      hints:
+        readOnly: true
+      outputParameters:
+      - type: object
+        mapping: $.

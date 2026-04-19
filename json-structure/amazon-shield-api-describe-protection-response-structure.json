@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-shield/refs/heads/main/json-structure/amazon-shield-api-describe-protection-response-structure.json",
+  "description": "DescribeProtectionResponse schema from api",
+  "type": "object",
+  "properties": {
+    "Protection": {
+      "$ref": "#/components/schemas/Protection"
+    }
+  },
+  "name": "DescribeProtectionResponse"
+}

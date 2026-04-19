@@ -1,0 +1,110 @@
+naftiko: 1.0.0-alpha1
+info:
+  label: Amazon Shield REST API
+  description: >-
+    AWS Shield is a managed DDoS protection service that safeguards applications
+    running on AWS. This API enables management of DDoS protections, protection
+    groups, subscriptions, attack details, and emergency engagement settings.
+  tags:
+  - Amazon Shield
+  - AWS
+  created: '2026-04-19'
+  modified: '2026-04-19'
+binds:
+- namespace: env
+  keys:
+    AMAZON_SHIELD_API_KEY: AMAZON_SHIELD_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: amazon-shield
+    baseUri: https://shield.us-east-1.amazonaws.com
+    description: Amazon Shield REST API
+    authentication:
+      type: bearer
+      token: '{{AWS_ACCESS_KEY}}'
+    resources:
+    - name: ''
+      path: /
+      description: ' operations'
+      operations:
+      - name: createProtection
+        method: POST
+        description: Amazon Shield Create Protection
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: '#ListProtections'
+      path: /#ListProtections
+      description: '#ListProtections operations'
+      operations:
+      - name: listProtections
+        method: POST
+        description: Amazon Shield List Protections
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: '#DescribeProtection'
+      path: /#DescribeProtection
+      description: '#DescribeProtection operations'
+      operations:
+      - name: describeProtection
+        method: POST
+        description: Amazon Shield Describe Protection
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: '#DescribeAttack'
+      path: /#DescribeAttack
+      description: '#DescribeAttack operations'
+      operations:
+      - name: describeAttack
+        method: POST
+        description: Amazon Shield Describe Attack
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: '#CreateSubscription'
+      path: /#CreateSubscription
+      description: '#CreateSubscription operations'
+      operations:
+      - name: createSubscription
+        method: POST
+        description: Amazon Shield Create Subscription
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: '#DescribeSubscription'
+      path: /#DescribeSubscription
+      description: '#DescribeSubscription operations'
+      operations:
+      - name: describeSubscription
+        method: POST
+        description: Amazon Shield Describe Subscription
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: '#CreateProtectionGroup'
+      path: /#CreateProtectionGroup
+      description: '#CreateProtectionGroup operations'
+      operations:
+      - name: createProtectionGroup
+        method: POST
+        description: Amazon Shield Create Protection Group
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.

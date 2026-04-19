@@ -1,0 +1,153 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "aws": "https://aws.amazon.com/schema/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "AttackDetail": "aws:AttackDetail",
+    "CreateProtectionGroupRequest": "aws:CreateProtectionGroupRequest",
+    "CreateProtectionRequest": "aws:CreateProtectionRequest",
+    "CreateProtectionResponse": "aws:CreateProtectionResponse",
+    "DescribeAttackRequest": "aws:DescribeAttackRequest",
+    "DescribeAttackResponse": "aws:DescribeAttackResponse",
+    "DescribeProtectionRequest": "aws:DescribeProtectionRequest",
+    "DescribeProtectionResponse": "aws:DescribeProtectionResponse",
+    "ListProtectionsRequest": "aws:ListProtectionsRequest",
+    "ListProtectionsResponse": "aws:ListProtectionsResponse",
+    "Mitigation": "aws:Mitigation",
+    "Protection": {
+      "@id": "aws:Protection",
+      "@type": "xsd:string"
+    },
+    "SummarizedCounter": "aws:SummarizedCounter",
+    "Tag": "aws:Tag",
+    "Amazon Shield Protection": "aws:Amazon Shield Protection",
+    "AttackId": {
+      "@id": "aws:AttackId",
+      "@type": "xsd:string"
+    },
+    "ResourceArn": {
+      "@id": "aws:ResourceArn",
+      "@type": "xsd:string"
+    },
+    "StartTime": {
+      "@id": "aws:StartTime",
+      "@type": "xsd:dateTime"
+    },
+    "EndTime": {
+      "@id": "aws:EndTime",
+      "@type": "xsd:dateTime"
+    },
+    "AttackCounters": {
+      "@id": "aws:AttackCounters",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "Mitigations": {
+      "@id": "aws:Mitigations",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "ProtectionGroupId": {
+      "@id": "aws:ProtectionGroupId",
+      "@type": "xsd:string"
+    },
+    "Aggregation": {
+      "@id": "aws:Aggregation",
+      "@type": "xsd:string"
+    },
+    "Pattern": {
+      "@id": "aws:Pattern",
+      "@type": "xsd:string"
+    },
+    "ResourceType": {
+      "@id": "aws:ResourceType",
+      "@type": "xsd:string"
+    },
+    "Members": {
+      "@id": "aws:Members",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "Name": {
+      "@id": "aws:Name",
+      "@type": "xsd:string"
+    },
+    "Tags": {
+      "@id": "aws:Tags",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "ProtectionId": {
+      "@id": "aws:ProtectionId",
+      "@type": "xsd:string"
+    },
+    "Attack": {
+      "@id": "aws:Attack",
+      "@type": "xsd:string"
+    },
+    "NextToken": {
+      "@id": "aws:NextToken",
+      "@type": "xsd:string"
+    },
+    "MaxResults": {
+      "@id": "aws:MaxResults",
+      "@type": "xsd:integer"
+    },
+    "Protections": {
+      "@id": "aws:Protections",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "MitigationName": {
+      "@id": "aws:MitigationName",
+      "@type": "xsd:string"
+    },
+    "Id": {
+      "@id": "aws:Id",
+      "@type": "xsd:string"
+    },
+    "HealthCheckIds": {
+      "@id": "aws:HealthCheckIds",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "ProtectionArn": {
+      "@id": "aws:ProtectionArn",
+      "@type": "xsd:string"
+    },
+    "Max": {
+      "@id": "aws:Max",
+      "@type": "xsd:decimal"
+    },
+    "Average": {
+      "@id": "aws:Average",
+      "@type": "xsd:decimal"
+    },
+    "Sum": {
+      "@id": "aws:Sum",
+      "@type": "xsd:decimal"
+    },
+    "N": {
+      "@id": "aws:N",
+      "@type": "xsd:integer"
+    },
+    "Unit": {
+      "@id": "aws:Unit",
+      "@type": "xsd:string"
+    },
+    "Key": {
+      "@id": "aws:Key",
+      "@type": "xsd:string"
+    },
+    "Value": {
+      "@id": "aws:Value",
+      "@type": "xsd:string"
+    },
+    "ApplicationLayerAutomaticResponseConfiguration": {
+      "@id": "aws:ApplicationLayerAutomaticResponseConfiguration",
+      "@type": "xsd:string"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-shield/refs/heads/main/json-structure/amazon-shield-api-create-protection-request-structure.json",
+  "description": "CreateProtectionRequest schema from api",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "type": "string"
+    },
+    "ResourceArn": {
+      "type": "string"
+    },
+    "Tags": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/Tag"
+      }
+    }
+  },
+  "required": [
+    "Name",
+    "ResourceArn"
+  ],
+  "name": "CreateProtectionRequest"
+}

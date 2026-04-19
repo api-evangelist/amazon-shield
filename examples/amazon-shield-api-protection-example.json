@@ -1,0 +1,9 @@
+{
+  "Id": "abc123",
+  "Name": "Example Resource",
+  "ResourceArn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "HealthCheckIds": [
+    "example-value"
+  ],
+  "ProtectionArn": "arn:aws:service:us-east-1:123456789012:resource/example"
+}

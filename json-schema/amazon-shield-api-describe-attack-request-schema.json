@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-shield/refs/heads/main/json-schema/amazon-shield-api-describe-attack-request-schema.json",
+  "title": "DescribeAttackRequest",
+  "description": "DescribeAttackRequest schema from api",
+  "type": "object",
+  "properties": {
+    "AttackId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "AttackId"
+  ]
+}

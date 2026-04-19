@@ -1,0 +1,95 @@
+{
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-shield/refs/heads/main/json-structure/amazon-shield-protection-structure.json",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "description": "Schema representing an AWS Shield protection resource. A protection enables AWS Shield Advanced DDoS protection for a specific AWS resource such as an Elastic IP, CloudFront distribution, or Application Load Balancer.",
+  "type": "object",
+  "required": [
+    "Name",
+    "ResourceArn"
+  ],
+  "properties": {
+    "Id": {
+      "type": "string",
+      "description": "The unique identifier (ID) of the protection."
+    },
+    "Name": {
+      "type": "string",
+      "description": "The name of the protection.",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "ResourceArn": {
+      "type": "string",
+      "description": "The ARN of the AWS resource that is protected."
+    },
+    "ProtectionArn": {
+      "type": "string",
+      "description": "The ARN of the protection.",
+      "pattern": "^arn:aws:shield::[0-9]{12}:protection/[a-zA-Z0-9-]+$"
+    },
+    "HealthCheckIds": {
+      "type": "array",
+      "description": "The unique identifiers for the health check associations.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "ApplicationLayerAutomaticResponseConfiguration": {
+      "$ref": "#/$defs/ApplicationLayerAutomaticResponseConfiguration"
+    },
+    "Tags": {
+      "type": "array",
+      "description": "Tags associated with the protection.",
+      "items": {
+        "$ref": "#/$defs/Tag"
+      }
+    }
+  },
+  "$defs": {
+    "ApplicationLayerAutomaticResponseConfiguration": {
+      "type": "object",
+      "properties": {
+        "Status": {
+          "type": "string",
+          "description": "Indicates whether automatic application layer DDoS mitigation is enabled.",
+          "enum": [
+            "ENABLED",
+            "DISABLED"
+          ]
+        },
+        "Action": {
+          "type": "object",
+          "description": "Specifies the action setting for the automatic response.",
+          "properties": {
+            "Block": {
+              "type": "object",
+              "description": "Specifies that Shield Advanced should block requests."
+            },
+            "Count": {
+              "type": "object",
+              "description": "Specifies that Shield Advanced should count requests."
+            }
+          }
+        }
+      }
+    },
+    "Tag": {
+      "type": "object",
+      "required": [
+        "Key"
+      ],
+      "properties": {
+        "Key": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "Value": {
+          "type": "string",
+          "maxLength": 256
+        }
+      }
+    }
+  },
+  "name": "Amazon Shield Protection"
+}

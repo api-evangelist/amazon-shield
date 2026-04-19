@@ -1,0 +1,119 @@
+vocabulary: 1.0.0
+info:
+  provider: Amazon Shield
+  description: Vocabulary for Amazon Shield APIs covering operational and capability dimensions
+  created: '2026-04-19'
+  modified: '2026-04-19'
+operational:
+  apis:
+  - name: Amazon Shield
+    namespace: amazon-shield
+    status: active
+  resources:
+  - name: ''
+    api: amazon-shield-api-openapi
+    actions:
+    - createProtection
+  - name: '#ListProtections'
+    api: amazon-shield-api-openapi
+    actions:
+    - listProtections
+  - name: '#DescribeProtection'
+    api: amazon-shield-api-openapi
+    actions:
+    - describeProtection
+  - name: '#DescribeAttack'
+    api: amazon-shield-api-openapi
+    actions:
+    - describeAttack
+  - name: '#CreateSubscription'
+    api: amazon-shield-api-openapi
+    actions:
+    - createSubscription
+  - name: '#DescribeSubscription'
+    api: amazon-shield-api-openapi
+    actions:
+    - describeSubscription
+  - name: '#CreateProtectionGroup'
+    api: amazon-shield-api-openapi
+    actions:
+    - createProtectionGroup
+  actions:
+  - name: create
+    httpMethod: POST
+    pattern: write
+  - name: list
+    httpMethod: POST
+    pattern: write
+  - name: post
+    httpMethod: POST
+    pattern: write
+  schemas:
+    core:
+    - amazon-shield-api-attack-detail
+    - amazon-shield-api-create-protection-group-request
+    - amazon-shield-api-create-protection-request
+    - amazon-shield-api-create-protection-response
+    - amazon-shield-api-describe-attack-request
+    - amazon-shield-api-describe-attack-response
+    - amazon-shield-api-describe-protection-request
+    - amazon-shield-api-describe-protection-response
+    - amazon-shield-api-list-protections-request
+    - amazon-shield-api-list-protections-response
+    - amazon-shield-api-mitigation
+    - amazon-shield-api-protection
+    - amazon-shield-api-summarized-counter
+    - amazon-shield-api-tag
+    - amazon-shield-protection
+  authentication:
+    schemes:
+    - type: bearer
+      description: AWS Signature V4
+capability:
+  workflows:
+  - name: Amazon Shield Operations
+    file: capabilities/amazon-shield.yaml
+    description: Automation workflow for Amazon Shield
+  personas:
+  - id: cloud-engineer
+    name: Cloud Engineer
+    description: Engineer managing Amazon Shield resources
+  domains:
+  - name: Cloud Operations
+    description: AWS cloud resource management
+crossReference:
+- resource: ''
+  operations:
+  - createProtection
+  workflows:
+  - Amazon Shield Operations
+- resource: '#ListProtections'
+  operations:
+  - listProtections
+  workflows:
+  - Amazon Shield Operations
+- resource: '#DescribeProtection'
+  operations:
+  - describeProtection
+  workflows:
+  - Amazon Shield Operations
+- resource: '#DescribeAttack'
+  operations:
+  - describeAttack
+  workflows:
+  - Amazon Shield Operations
+- resource: '#CreateSubscription'
+  operations:
+  - createSubscription
+  workflows:
+  - Amazon Shield Operations
+- resource: '#DescribeSubscription'
+  operations:
+  - describeSubscription
+  workflows:
+  - Amazon Shield Operations
+- resource: '#CreateProtectionGroup'
+  operations:
+  - createProtectionGroup
+  workflows:
+  - Amazon Shield Operations

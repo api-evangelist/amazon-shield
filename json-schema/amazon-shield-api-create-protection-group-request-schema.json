@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-shield/refs/heads/main/json-schema/amazon-shield-api-create-protection-group-request-schema.json",
+  "title": "CreateProtectionGroupRequest",
+  "description": "CreateProtectionGroupRequest schema from api",
+  "type": "object",
+  "properties": {
+    "ProtectionGroupId": {
+      "type": "string"
+    },
+    "Aggregation": {
+      "type": "string",
+      "enum": [
+        "SUM",
+        "MEAN",
+        "MAX"
+      ]
+    },
+    "Pattern": {
+      "type": "string",
+      "enum": [
+        "ALL",
+        "ARBITRARY",
+        "BY_RESOURCE_TYPE"
+      ]
+    },
+    "ResourceType": {
+      "type": "string",
+      "enum": [
+        "CLOUDFRONT_DISTRIBUTION",
+        "ROUTE_53_HOSTED_ZONE",
+        "ELASTIC_IP_ALLOCATION",
+        "CLASSIC_LOAD_BALANCER",
+        "APPLICATION_LOAD_BALANCER",
+        "GLOBAL_ACCELERATOR"
+      ]
+    },
+    "Members": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "ProtectionGroupId",
+    "Aggregation",
+    "Pattern"
+  ]
+}

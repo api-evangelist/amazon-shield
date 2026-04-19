@@ -1,0 +1,8 @@
+{
+  "Name": "Example Resource",
+  "Max": 99.5,
+  "Average": 99.5,
+  "Sum": 99.5,
+  "N": 100,
+  "Unit": "example-value"
+}

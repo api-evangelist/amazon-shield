@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-shield/refs/heads/main/json-schema/amazon-shield-api-protection-schema.json",
+  "title": "Protection",
+  "description": "Protection schema from api",
+  "type": "object",
+  "properties": {
+    "Id": {
+      "type": "string"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "ResourceArn": {
+      "type": "string"
+    },
+    "HealthCheckIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "ProtectionArn": {
+      "type": "string"
+    }
+  }
+}

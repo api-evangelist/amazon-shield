@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-shield/refs/heads/main/json-schema/amazon-shield-api-create-protection-response-schema.json",
+  "title": "CreateProtectionResponse",
+  "description": "CreateProtectionResponse schema from api",
+  "type": "object",
+  "properties": {
+    "ProtectionId": {
+      "type": "string"
+    }
+  }
+}

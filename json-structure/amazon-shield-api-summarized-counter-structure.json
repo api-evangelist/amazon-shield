@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-shield/refs/heads/main/json-structure/amazon-shield-api-summarized-counter-structure.json",
+  "description": "SummarizedCounter schema from api",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "type": "string"
+    },
+    "Max": {
+      "type": "double"
+    },
+    "Average": {
+      "type": "double"
+    },
+    "Sum": {
+      "type": "double"
+    },
+    "N": {
+      "type": "int32"
+    },
+    "Unit": {
+      "type": "string"
+    }
+  },
+  "name": "SummarizedCounter"
+}

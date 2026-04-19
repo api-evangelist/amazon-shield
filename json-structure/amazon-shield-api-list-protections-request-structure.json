@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-shield/refs/heads/main/json-structure/amazon-shield-api-list-protections-request-structure.json",
+  "description": "ListProtectionsRequest schema from api",
+  "type": "object",
+  "properties": {
+    "NextToken": {
+      "type": "string"
+    },
+    "MaxResults": {
+      "type": "int32"
+    }
+  },
+  "name": "ListProtectionsRequest"
+}

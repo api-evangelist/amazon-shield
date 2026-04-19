@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-shield/refs/heads/main/json-structure/amazon-shield-api-attack-detail-structure.json",
+  "description": "AttackDetail schema from api",
+  "type": "object",
+  "properties": {
+    "AttackId": {
+      "type": "string"
+    },
+    "ResourceArn": {
+      "type": "string"
+    },
+    "StartTime": {
+      "type": "datetime"
+    },
+    "EndTime": {
+      "type": "datetime"
+    },
+    "AttackCounters": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/SummarizedCounter"
+      }
+    },
+    "Mitigations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/Mitigation"
+      }
+    }
+  },
+  "name": "AttackDetail"
+}

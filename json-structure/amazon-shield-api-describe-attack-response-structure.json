@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-shield/refs/heads/main/json-structure/amazon-shield-api-describe-attack-response-structure.json",
+  "description": "DescribeAttackResponse schema from api",
+  "type": "object",
+  "properties": {
+    "Attack": {
+      "$ref": "#/components/schemas/AttackDetail"
+    }
+  },
+  "name": "DescribeAttackResponse"
+}

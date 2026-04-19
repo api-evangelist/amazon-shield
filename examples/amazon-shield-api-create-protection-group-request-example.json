@@ -1,0 +1,9 @@
+{
+  "ProtectionGroupId": "abc123",
+  "Aggregation": "SUM",
+  "Pattern": "ALL",
+  "ResourceType": "CLOUDFRONT_DISTRIBUTION",
+  "Members": [
+    "example-value"
+  ]
+}

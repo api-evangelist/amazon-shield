@@ -1,0 +1,12 @@
+{
+  "AttackId": "abc123",
+  "ResourceArn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "StartTime": "2026-04-19T00:00:00Z",
+  "EndTime": "2026-04-19T00:00:00Z",
+  "AttackCounters": [
+    "example-value"
+  ],
+  "Mitigations": [
+    "example-value"
+  ]
+}

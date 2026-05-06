@@ -1,4 +1,4 @@
-naftiko: 1.0.0-alpha1
+naftiko: 1.0.0-alpha2
 info:
   label: Amazon Shield Operations
   description: Workflow capability for Amazon Shield. Enables automation of Amazon Shield resources for cloud operations teams.
@@ -7,7 +7,7 @@ info:
   - AWS
   - Cloud Operations
   created: '2026-04-19'
-  modified: '2026-04-19'
+  modified: '2026-05-06'
 binds:
 - namespace: env
   keys:
@@ -15,8 +15,98 @@ binds:
     AWS_SECRET_KEY: AWS_SECRET_KEY
 capability:
   consumes:
-  - import: amazon-shield
-    location: ./shared/amazon-shield.yaml
+  - type: http
+    namespace: amazon-shield
+    baseUri: https://shield.us-east-1.amazonaws.com
+    description: Amazon Shield REST API
+    authentication:
+      type: bearer
+      token: '{{AWS_ACCESS_KEY}}'
+    resources:
+    - name: ''
+      path: /
+      description: ' operations'
+      operations:
+      - name: createProtection
+        method: POST
+        description: Amazon Shield Create Protection
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: '#ListProtections'
+      path: /#ListProtections
+      description: '#ListProtections operations'
+      operations:
+      - name: listProtections
+        method: POST
+        description: Amazon Shield List Protections
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: '#DescribeProtection'
+      path: /#DescribeProtection
+      description: '#DescribeProtection operations'
+      operations:
+      - name: describeProtection
+        method: POST
+        description: Amazon Shield Describe Protection
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: '#DescribeAttack'
+      path: /#DescribeAttack
+      description: '#DescribeAttack operations'
+      operations:
+      - name: describeAttack
+        method: POST
+        description: Amazon Shield Describe Attack
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: '#CreateSubscription'
+      path: /#CreateSubscription
+      description: '#CreateSubscription operations'
+      operations:
+      - name: createSubscription
+        method: POST
+        description: Amazon Shield Create Subscription
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: '#DescribeSubscription'
+      path: /#DescribeSubscription
+      description: '#DescribeSubscription operations'
+      operations:
+      - name: describeSubscription
+        method: POST
+        description: Amazon Shield Describe Subscription
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: '#CreateProtectionGroup'
+      path: /#CreateProtectionGroup
+      description: '#CreateProtectionGroup operations'
+      operations:
+      - name: createProtectionGroup
+        method: POST
+        description: Amazon Shield Create Protection Group
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
   exposes:
   - type: rest
     port: 8080

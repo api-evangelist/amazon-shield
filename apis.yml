@@ -58,9 +58,9 @@ common:
   url: https://health.aws.amazon.com/health/status
 - type: Contact
   url: https://aws.amazon.com/contact-us/
-- type: JSON-LD
+- type: JSONLD
   url: json-ld/amazon-shield-context-context.jsonld
-- type: JSON-LD
+- type: JSONLD
   url: json-ld/amazon-shield-context.jsonld
 - type: JSONSchema
   url: json-schema/amazon-shield-api-attack-detail-schema.json

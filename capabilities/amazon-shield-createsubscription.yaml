@@ -1,0 +1,72 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: 'Amazon Shield REST API — #CreateSubscription'
+  description: 'Amazon Shield REST API — #CreateSubscription. 1 operations. Lead operation: Amazon Shield Create Subscription.
+    Self-contained Naftiko capability covering one Amazon Shield business surface.'
+  tags:
+  - Amazon Shield
+  - '#CreateSubscription'
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    AMAZON_SHIELD_API_KEY: AMAZON_SHIELD_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: amazon-shield-createsubscription
+    baseUri: https://shield.us-east-1.amazonaws.com
+    description: 'Amazon Shield REST API — #CreateSubscription business capability. Self-contained, no shared references.'
+    resources:
+    - name: '#CreateSubscription'
+      path: /#CreateSubscription
+      operations:
+      - name: createsubscription
+        method: POST
+        description: Amazon Shield Create Subscription
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: apikey
+      key: Authorization
+      value: '{{env.AMAZON_SHIELD_API_KEY}}'
+      placement: header
+  exposes:
+  - type: rest
+    namespace: amazon-shield-createsubscription-rest
+    port: 8080
+    description: 'REST adapter for Amazon Shield REST API — #CreateSubscription. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.'
+    resources:
+    - path: /v1/createsubscription
+      name: createsubscription
+      description: 'REST surface for #CreateSubscription.'
+      operations:
+      - method: POST
+        name: createsubscription
+        description: Amazon Shield Create Subscription
+        call: amazon-shield-createsubscription.createsubscription
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: amazon-shield-createsubscription-mcp
+    port: 9090
+    transport: http
+    description: 'MCP adapter for Amazon Shield REST API — #CreateSubscription. One tool per consumed operation, routed inline
+      through this capability''s consumes block.'
+    tools:
+    - name: amazon-shield-create-subscription
+      description: Amazon Shield Create Subscription
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-shield-createsubscription.createsubscription
+      outputParameters:
+      - type: object
+        mapping: $.

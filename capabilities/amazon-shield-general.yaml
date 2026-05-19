@@ -1,0 +1,81 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Amazon Shield REST API
+  description: 'Amazon Shield REST API. 1 operations. Lead operation: Amazon Shield Create Protection. Self-contained Naftiko
+    capability covering one Amazon Shield business surface.'
+  tags:
+  - Amazon Shield
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    AMAZON_SHIELD_API_KEY: AMAZON_SHIELD_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: amazon-shield-general
+    baseUri: https://shield.us-east-1.amazonaws.com
+    description: Amazon Shield REST API business capability. Self-contained, no shared references.
+    resources:
+    - name: root
+      path: /
+      operations:
+      - name: createprotection
+        method: POST
+        description: Amazon Shield Create Protection
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    authentication:
+      type: apikey
+      key: Authorization
+      value: '{{env.AMAZON_SHIELD_API_KEY}}'
+      placement: header
+  exposes:
+  - type: rest
+    namespace: amazon-shield-general-rest
+    port: 8080
+    description: REST adapter for Amazon Shield REST API. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1
+      name: root
+      description: REST surface for root.
+      operations:
+      - method: POST
+        name: createprotection
+        description: Amazon Shield Create Protection
+        call: amazon-shield-general.createprotection
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: amazon-shield-general-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Amazon Shield REST API. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: amazon-shield-create-protection
+      description: Amazon Shield Create Protection
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-shield-general.createprotection
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.

@@ -1,19 +1,17 @@
 name: Amazon Shield
-description: AWS Shield is a managed Distributed Denial of Service (DDoS) protection service that safeguards applications running on AWS. It provides always-on detection and automatic inline 
-  mitigations that minimize application downtime and latency, with two tiers of protection - Shield Standard for automatic defense against common attacks and Shield Advanced for enhanced detection and
-  24/7 access to the DDoS Response Team.
+description: AWS Shield is a managed Distributed Denial of Service (DDoS) protection service that safeguards applications
+  running on AWS. It provides always-on detection and automatic inline mitigations that minimize application downtime and
+  latency, with two tiers of protection - Shield Standard for automatic defense against common attacks and Shield Advanced
+  for enhanced detection and 24/7 access to the DDoS Response Team.
 image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
 url: https://raw.githubusercontent.com/api-evangelist/amazon-shield/refs/heads/main/apis.yml
 created: '2024-01-15'
-modified: '2026-04-19'
+modified: '2026-05-19'
 apis:
 - name: AWS Shield API
-  description: >-
-    The AWS Shield API provides programmatic access to manage DDoS protection
-    for your AWS resources. It enables developers to create and manage
-    protections, subscribe to Shield Advanced, configure emergency contacts,
-    view attack details and statistics, and manage protection groups for
-    coordinated defense across multiple resources.
+  description: The AWS Shield API provides programmatic access to manage DDoS protection for your AWS resources. It enables
+    developers to create and manage protections, subscribe to Shield Advanced, configure emergency contacts, view attack details
+    and statistics, and manage protection groups for coordinated defense across multiple resources.
   image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
   humanURL: https://aws.amazon.com/shield/
   baseURL: https://shield.amazonaws.com
@@ -33,6 +31,20 @@ apis:
     url: https://aws.amazon.com/shield/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/shield/faqs/
+  - type: NaftikoCapability
+    url: capabilities/amazon-shield-createprotectiongroup.yaml
+  - type: NaftikoCapability
+    url: capabilities/amazon-shield-createsubscription.yaml
+  - type: NaftikoCapability
+    url: capabilities/amazon-shield-describeattack.yaml
+  - type: NaftikoCapability
+    url: capabilities/amazon-shield-describeprotection.yaml
+  - type: NaftikoCapability
+    url: capabilities/amazon-shield-describesubscription.yaml
+  - type: NaftikoCapability
+    url: capabilities/amazon-shield-listprotections.yaml
+  - type: NaftikoCapability
+    url: capabilities/amazon-shield-general.yaml
 common:
 - type: Portal
   url: https://aws.amazon.com/
@@ -152,10 +164,6 @@ common:
   url: examples/amazon-shield-api-tag-example.json
 - type: Example
   url: examples/amazon-shield-protection-example.json
-- type: NaftikoCapability
-  url: capabilities/amazon-shield.yaml
-- type: NaftikoCapability
-  url: capabilities/shared/amazon-shield.yaml
 - type: SpectralRules
   url: rules/amazon-shield-spectral-rules.yml
 - type: Vocabulary
@@ -165,14 +173,14 @@ common:
 - type: Integrations
   url: https://aws.amazon.com/partners/
 integrations:
-  - name: Partner Programs
-  - name: Resources
-  - name: Success Stories
-  - name: Work with an AWS Partner
-  - name: AWS Marketplace
-  - name: AWS Partner Central
-  - name: Partner Paths
-  - name: co-sell with AWS
+- name: Partner Programs
+- name: Resources
+- name: Success Stories
+- name: Work with an AWS Partner
+- name: AWS Marketplace
+- name: AWS Partner Central
+- name: Partner Paths
+- name: co-sell with AWS
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

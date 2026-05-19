@@ -1,0 +1,82 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: 'Amazon Shield REST API — #ListProtections'
+  description: 'Amazon Shield REST API — #ListProtections. 1 operations. Lead operation: Amazon Shield List Protections. Self-contained
+    Naftiko capability covering one Amazon Shield business surface.'
+  tags:
+  - Amazon Shield
+  - '#ListProtections'
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    AMAZON_SHIELD_API_KEY: AMAZON_SHIELD_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: amazon-shield-listprotections
+    baseUri: https://shield.us-east-1.amazonaws.com
+    description: 'Amazon Shield REST API — #ListProtections business capability. Self-contained, no shared references.'
+    resources:
+    - name: '#ListProtections'
+      path: /#ListProtections
+      operations:
+      - name: listprotections
+        method: POST
+        description: Amazon Shield List Protections
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    authentication:
+      type: apikey
+      key: Authorization
+      value: '{{env.AMAZON_SHIELD_API_KEY}}'
+      placement: header
+  exposes:
+  - type: rest
+    namespace: amazon-shield-listprotections-rest
+    port: 8080
+    description: 'REST adapter for Amazon Shield REST API — #ListProtections. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.'
+    resources:
+    - path: /v1/listprotections
+      name: listprotections
+      description: 'REST surface for #ListProtections.'
+      operations:
+      - method: POST
+        name: listprotections
+        description: Amazon Shield List Protections
+        call: amazon-shield-listprotections.listprotections
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: amazon-shield-listprotections-mcp
+    port: 9090
+    transport: http
+    description: 'MCP adapter for Amazon Shield REST API — #ListProtections. One tool per consumed operation, routed inline
+      through this capability''s consumes block.'
+    tools:
+    - name: amazon-shield-list-protections
+      description: Amazon Shield List Protections
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: amazon-shield-listprotections.listprotections
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.

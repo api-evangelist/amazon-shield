@@ -1,0 +1,171 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon Shield REST API",
+    "version": "2016-06-02"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Default",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Shield Create Protection",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://shield.us-east-1.amazonaws.com/",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Enables AWS Shield Advanced for a specific AWS resource."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "#ListProtections",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Shield List Protections",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://shield.us-east-1.amazonaws.com/#ListProtections",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Lists all Protection objects for the account."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "#DescribeProtection",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Shield Describe Protection",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://shield.us-east-1.amazonaws.com/#DescribeProtection",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Lists the details of a Protection object."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "#DescribeAttack",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Shield Describe Attack",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://shield.us-east-1.amazonaws.com/#DescribeAttack",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Describes the details of a DDoS attack that is detected."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "#CreateSubscription",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Shield Create Subscription",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://shield.us-east-1.amazonaws.com/#CreateSubscription"
+          },
+          "docs": "Activates AWS Shield Advanced for an account."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "#DescribeSubscription",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Shield Describe Subscription",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://shield.us-east-1.amazonaws.com/#DescribeSubscription"
+          },
+          "docs": "Provides details about the AWS Shield Advanced subscription for an account."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "#CreateProtectionGroup",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Shield Create Protection Group",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://shield.us-east-1.amazonaws.com/#CreateProtectionGroup",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a grouping of protected resources so they can be handled as a collective."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

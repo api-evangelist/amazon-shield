@@ -1,0 +1,689 @@
+{
+  "item": [
+    {
+      "id": "4ee8bc49-1fa3-4b65-8b4b-4cdf889aff13",
+      "name": "#CreateProtectionGroup",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "45d0b77c-bd0b-4419-b6b1-b6a87cefe62a",
+          "name": "Amazon Shield Create Protection Group",
+          "request": {
+            "name": "Amazon Shield Create Protection Group",
+            "description": {
+              "content": "Creates a grouping of protected resources so they can be handled as a collective.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "hash": "CreateProtectionGroup",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"ProtectionGroupId\": \"<string>\",\n  \"Aggregation\": \"<string>\",\n  \"Pattern\": \"<string>\",\n  \"ResourceType\": \"<string>\",\n  \"Members\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+            }
+          },
+          "response": [
+            {
+              "id": "e228d735-1abd-4fd0-9502-6ab80c27723c",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "CreateProtectionGroup",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ProtectionGroupId\": \"<string>\",\n  \"Aggregation\": \"<string>\",\n  \"Pattern\": \"<string>\",\n  \"ResourceType\": \"<string>\",\n  \"Members\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "b8de4887-dbf4-4c8b-a146-a22dc93b781e",
+      "name": "#CreateSubscription",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3c1daf16-e5a6-4608-b19e-4d17465805af",
+          "name": "Amazon Shield Create Subscription",
+          "request": {
+            "name": "Amazon Shield Create Subscription",
+            "description": {
+              "content": "Activates AWS Shield Advanced for an account.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "hash": "CreateSubscription",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a9cfda63-e68e-4274-a256-f04a36d4a1cb",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "CreateSubscription",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "d1426758-1efd-4293-b43b-03db8c514987",
+      "name": "#DescribeAttack",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a06b0e12-2c7c-4d93-a13a-8ce135c849dd",
+          "name": "Amazon Shield Describe Attack",
+          "request": {
+            "name": "Amazon Shield Describe Attack",
+            "description": {
+              "content": "Describes the details of a DDoS attack that is detected.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "hash": "DescribeAttack",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"AttackId\": \"<string>\"\n}"
+            }
+          },
+          "response": [
+            {
+              "id": "fd67e996-ce21-470b-b230-ef79fbf5f9e2",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "DescribeAttack",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"AttackId\": \"<string>\"\n}"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"Attack\": {\n    \"AttackId\": \"string\",\n    \"ResourceArn\": \"string\",\n    \"StartTime\": \"2010-02-24T02:33:43.849Z\",\n    \"EndTime\": \"2017-02-06T11:42:32.385Z\",\n    \"AttackCounters\": [\n      {\n        \"Name\": \"string\",\n        \"Max\": 8258.715552832788,\n        \"Average\": 9938.311701869643,\n        \"Sum\": 163.19431669332363,\n        \"N\": 744,\n        \"Unit\": \"string\"\n      },\n      {\n        \"Name\": \"string\",\n        \"Max\": 2175.4927495268994,\n        \"Average\": 2743.5040625697015,\n        \"Sum\": 5769.310751397181,\n        \"N\": 3961,\n        \"Unit\": \"string\"\n      }\n    ],\n    \"Mitigations\": [\n      {\n        \"MitigationName\": \"string\"\n      },\n      {\n        \"MitigationName\": \"string\"\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "00a02fe7-b3be-46ae-be4f-96f7812237dd",
+      "name": "#DescribeProtection",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e36383c4-b08a-4185-81e1-72c6db33374c",
+          "name": "Amazon Shield Describe Protection",
+          "request": {
+            "name": "Amazon Shield Describe Protection",
+            "description": {
+              "content": "Lists the details of a Protection object.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "hash": "DescribeProtection",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"ProtectionId\": \"<string>\",\n  \"ResourceArn\": \"<string>\"\n}"
+            }
+          },
+          "response": [
+            {
+              "id": "b0fcc8bf-1bfb-4f4d-a531-d79c5d06748a",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "DescribeProtection",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ProtectionId\": \"<string>\",\n  \"ResourceArn\": \"<string>\"\n}"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"Protection\": {\n    \"Id\": \"string\",\n    \"Name\": \"string\",\n    \"ResourceArn\": \"string\",\n    \"HealthCheckIds\": [\n      \"string\",\n      \"string\"\n    ],\n    \"ProtectionArn\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "bf49c7bf-4cae-403d-91ce-9499812e4f8d",
+      "name": "#DescribeSubscription",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b6129273-0a80-487a-aa40-bb0c3a6cb5fa",
+          "name": "Amazon Shield Describe Subscription",
+          "request": {
+            "name": "Amazon Shield Describe Subscription",
+            "description": {
+              "content": "Provides details about the AWS Shield Advanced subscription for an account.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "hash": "DescribeSubscription",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "008af9f2-027b-42f8-91fc-ee81076eaa53",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "DescribeSubscription",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "9c8d691a-4bb5-4759-abf7-76ab987ff839",
+      "name": "#ListProtections",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "752cff03-14c3-45c4-af1f-fcd199088140",
+          "name": "Amazon Shield List Protections",
+          "request": {
+            "name": "Amazon Shield List Protections",
+            "description": {
+              "content": "Lists all Protection objects for the account.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "hash": "ListProtections",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"NextToken\": \"<string>\",\n  \"MaxResults\": \"<integer>\"\n}"
+            }
+          },
+          "response": [
+            {
+              "id": "121b1629-835c-4aff-aa1c-1720a9ebc7c1",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "ListProtections",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"NextToken\": \"<string>\",\n  \"MaxResults\": \"<integer>\"\n}"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"Protections\": [\n    {\n      \"Id\": \"string\",\n      \"Name\": \"string\",\n      \"ResourceArn\": \"string\",\n      \"HealthCheckIds\": [\n        \"string\",\n        \"string\"\n      ],\n      \"ProtectionArn\": \"string\"\n    },\n    {\n      \"Id\": \"string\",\n      \"Name\": \"string\",\n      \"ResourceArn\": \"string\",\n      \"HealthCheckIds\": [\n        \"string\",\n        \"string\"\n      ],\n      \"ProtectionArn\": \"string\"\n    }\n  ],\n  \"NextToken\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "d11b8caa-77a5-48ee-9c2f-37e22b4799ea",
+      "name": "Amazon Shield Create Protection",
+      "request": {
+        "name": "Amazon Shield Create Protection",
+        "description": {
+          "content": "Enables AWS Shield Advanced for a specific AWS resource.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            ""
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-amz-json-1.1"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"Name\": \"<string>\",\n  \"ResourceArn\": \"<string>\",\n  \"Tags\": [\n    {\n      \"Key\": \"<string>\",\n      \"Value\": \"<string>\"\n    },\n    {\n      \"Key\": \"<string>\",\n      \"Value\": \"<string>\"\n    }\n  ]\n}"
+        }
+      },
+      "response": [
+        {
+          "id": "fdfc2fd7-3043-4083-a01e-274604b95d4f",
+          "name": "Successful response",
+          "originalRequest": {
+            "url": {
+              "path": [
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: apikey",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<API Key>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"Name\": \"<string>\",\n  \"ResourceArn\": \"<string>\",\n  \"Tags\": [\n    {\n      \"Key\": \"string\",\n      \"Value\": \"string\"\n    },\n    {\n      \"Key\": \"string\",\n      \"Value\": \"string\"\n    }\n  ]\n}"
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"ProtectionId\": \"string\"\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://shield.us-east-1.amazonaws.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "37e42b49-8242-4b60-923c-131dd346b3da",
+    "name": "Amazon Shield REST API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "AWS Shield is a managed DDoS protection service that safeguards applications running on AWS. This API enables management of DDoS protections, protection groups, subscriptions, attack details, and emergency engagement settings.\n\nContact Support:\n Name: AWS Support",
+      "type": "text/plain"
+    }
+  }
+}

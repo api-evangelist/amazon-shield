@@ -50,7 +50,7 @@ common:
     url: https://github.com/aws
   - type: Portal
     url: https://console.aws.amazon.com/wafv2/shieldv2
-  - type: SignUp
+  - type: Signup
     url: https://signin.aws.amazon.com/signup?request_type=register
   - type: Login
     url: https://aws.amazon.com/console/
@@ -122,35 +122,35 @@ common:
     url: json-structure/amazon-shield-api-tag-structure.json
   - type: JSONStructure
     url: json-structure/amazon-shield-protection-structure.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-shield-api-attack-detail-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-shield-api-create-protection-group-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-shield-api-create-protection-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-shield-api-create-protection-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-shield-api-describe-attack-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-shield-api-describe-attack-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-shield-api-describe-protection-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-shield-api-describe-protection-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-shield-api-list-protections-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-shield-api-list-protections-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-shield-api-mitigation-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-shield-api-protection-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-shield-api-summarized-counter-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-shield-api-tag-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-shield-protection-example.json
   - type: SpectralRules
     url: rules/amazon-shield-spectral-rules.yml

@@ -34,6 +34,8 @@ apis:
       - type: FAQ
         url: https://aws.amazon.com/shield/faqs/
 common:
+  - type: AgenticAccess
+    url: agentic-access/amazon-shield-agentic-access.yml
   - type: TrustCenter
     url: security/amazon-shield-trust-center.yml
   - type: VulnerabilityDisclosure

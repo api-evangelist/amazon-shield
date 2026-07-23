@@ -1,0 +1,80 @@
+openapi: 3.1.0
+info:
+  title: Amazon Shield REST Amazon Shield REST API API
+  description: AWS Shield is a managed DDoS protection service that safeguards applications running on AWS. This API enables management of DDoS protections, protection groups, subscriptions, attack details, and emergency engagement settings.
+  version: '2016-06-02'
+  contact:
+    name: AWS Support
+    url: https://aws.amazon.com/premiumsupport/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: https://aws.amazon.com/service-terms/
+  x-logo:
+    url: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+servers:
+- url: https://shield.us-east-1.amazonaws.com
+  description: AWS Shield global endpoint (us-east-1 only)
+security:
+- sigv4: []
+tags:
+- name: Amazon Shield REST API
+paths:
+  /:
+    post:
+      summary: Amazon Shield Create Protection
+      description: Enables AWS Shield Advanced for a specific AWS resource.
+      operationId: createProtection
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              $ref: '#/components/schemas/CreateProtectionRequest'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateProtectionResponse'
+      x-amz-target: AWSShield_20160616.CreateProtection
+      tags:
+      - Amazon Shield REST API
+components:
+  schemas:
+    CreateProtectionRequest:
+      type: object
+      required:
+      - Name
+      - ResourceArn
+      properties:
+        Name:
+          type: string
+        ResourceArn:
+          type: string
+        Tags:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tag'
+    CreateProtectionResponse:
+      type: object
+      properties:
+        ProtectionId:
+          type: string
+    Tag:
+      type: object
+      properties:
+        Key:
+          type: string
+        Value:
+          type: string
+  securitySchemes:
+    sigv4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4
+externalDocs:
+  description: AWS Shield API Reference
+  url: https://docs.aws.amazon.com/waf/latest/DDOSAPIReference/Welcome.html

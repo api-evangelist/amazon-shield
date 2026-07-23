@@ -1,0 +1,84 @@
+openapi: 3.1.0
+info:
+  title: 'Amazon Shield REST Amazon Shield REST API #CreateProtectionGroup API'
+  description: AWS Shield is a managed DDoS protection service that safeguards applications running on AWS. This API enables management of DDoS protections, protection groups, subscriptions, attack details, and emergency engagement settings.
+  version: '2016-06-02'
+  contact:
+    name: AWS Support
+    url: https://aws.amazon.com/premiumsupport/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: https://aws.amazon.com/service-terms/
+  x-logo:
+    url: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+servers:
+- url: https://shield.us-east-1.amazonaws.com
+  description: AWS Shield global endpoint (us-east-1 only)
+security:
+- sigv4: []
+tags:
+- name: '#CreateProtectionGroup'
+paths:
+  /#CreateProtectionGroup:
+    post:
+      summary: Amazon Shield Create Protection Group
+      description: Creates a grouping of protected resources so they can be handled as a collective.
+      operationId: createProtectionGroup
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              $ref: '#/components/schemas/CreateProtectionGroupRequest'
+      responses:
+        '200':
+          description: Successful response
+      x-amz-target: AWSShield_20160616.CreateProtectionGroup
+      tags:
+      - '#CreateProtectionGroup'
+components:
+  schemas:
+    CreateProtectionGroupRequest:
+      type: object
+      required:
+      - ProtectionGroupId
+      - Aggregation
+      - Pattern
+      properties:
+        ProtectionGroupId:
+          type: string
+        Aggregation:
+          type: string
+          enum:
+          - SUM
+          - MEAN
+          - MAX
+        Pattern:
+          type: string
+          enum:
+          - ALL
+          - ARBITRARY
+          - BY_RESOURCE_TYPE
+        ResourceType:
+          type: string
+          enum:
+          - CLOUDFRONT_DISTRIBUTION
+          - ROUTE_53_HOSTED_ZONE
+          - ELASTIC_IP_ALLOCATION
+          - CLASSIC_LOAD_BALANCER
+          - APPLICATION_LOAD_BALANCER
+          - GLOBAL_ACCELERATOR
+        Members:
+          type: array
+          items:
+            type: string
+  securitySchemes:
+    sigv4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4
+externalDocs:
+  description: AWS Shield API Reference
+  url: https://docs.aws.amazon.com/waf/latest/DDOSAPIReference/Welcome.html

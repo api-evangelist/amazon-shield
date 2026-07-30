@@ -4,36 +4,156 @@ description: >-
   on AWS. It provides always-on detection and automatic inline mitigations that minimize application downtime and
   latency, with two tiers of protection - Shield Standard for automatic defense against common attacks and Shield
   Advanced for enhanced detection and 24/7 access to the DDoS Response Team.
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
 url: https://raw.githubusercontent.com/api-evangelist/amazon-shield/refs/heads/main/apis.yml
 created: '2024-01-15'
 modified: '2026-05-19'
 apis:
-  - name: AWS Shield API
-    description: >-
-      The AWS Shield API provides programmatic access to manage DDoS protection for your AWS resources. It enables
-      developers to create and manage protections, subscribe to Shield Advanced, configure emergency contacts, view
-      attack details and statistics, and manage protection groups for coordinated defense across multiple resources.
-    image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
-    humanURL: https://aws.amazon.com/shield/
-    baseURL: https://shield.amazonaws.com
-    tags:
-      - AWS
-      - DDoS Protection
-      - Networking
-      - Security
-    properties:
-      - type: Documentation
-        url: https://docs.aws.amazon.com/waf/latest/developerguide/shield-chapter.html
-      - type: OpenAPI
-        url: openapi/amazon-shield-openapi.yml
-      - type: Pricing
-        url: https://aws.amazon.com/shield/pricing/
-      - type: GettingStarted
-        url: https://aws.amazon.com/shield/getting-started/
-      - type: FAQ
-        url: https://aws.amazon.com/shield/faqs/
+- aid: amazon-shield:amazon-shield-amazon-shield-rest-api-api
+  name: Amazon Shield Amazon Shield REST API API
+  description: >-
+    The Amazon Shield REST API API from Amazon Shield — 1 operation(s) for amazon shield rest api.
+  humanURL: https://aws.amazon.com/shield/
+  baseURL: https://shield.amazonaws.com
+  tags:
+  - Amazon Shield REST API
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-shield-amazon-shield-rest-api-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/waf/latest/developerguide/shield-chapter.html
+  - type: Pricing
+    url: https://aws.amazon.com/shield/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/shield/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/shield/faqs/
+- aid: amazon-shield:amazon-shield-createprotectiongroup-api
+  name: 'Amazon Shield #CreateProtectionGroup API'
+  description: >-
+    The #CreateProtectionGroup API from Amazon Shield — 1 operation(s) for #createprotectiongroup.
+  humanURL: https://aws.amazon.com/shield/
+  baseURL: https://shield.amazonaws.com
+  tags:
+  - '#CreateProtectionGroup'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-shield-createprotectiongroup-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/waf/latest/developerguide/shield-chapter.html
+  - type: Pricing
+    url: https://aws.amazon.com/shield/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/shield/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/shield/faqs/
+- aid: amazon-shield:amazon-shield-createsubscription-api
+  name: 'Amazon Shield #CreateSubscription API'
+  description: 'The #CreateSubscription API from Amazon Shield — 1 operation(s) for #createsubscription.'
+  humanURL: https://aws.amazon.com/shield/
+  baseURL: https://shield.amazonaws.com
+  tags:
+  - '#CreateSubscription'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-shield-createsubscription-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/waf/latest/developerguide/shield-chapter.html
+  - type: Pricing
+    url: https://aws.amazon.com/shield/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/shield/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/shield/faqs/
+- aid: amazon-shield:amazon-shield-describeattack-api
+  name: 'Amazon Shield #DescribeAttack API'
+  description: 'The #DescribeAttack API from Amazon Shield — 1 operation(s) for #describeattack.'
+  humanURL: https://aws.amazon.com/shield/
+  baseURL: https://shield.amazonaws.com
+  tags:
+  - '#DescribeAttack'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-shield-describeattack-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/waf/latest/developerguide/shield-chapter.html
+  - type: Pricing
+    url: https://aws.amazon.com/shield/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/shield/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/shield/faqs/
+- aid: amazon-shield:amazon-shield-describeprotection-api
+  name: 'Amazon Shield #DescribeProtection API'
+  description: 'The #DescribeProtection API from Amazon Shield — 1 operation(s) for #describeprotection.'
+  humanURL: https://aws.amazon.com/shield/
+  baseURL: https://shield.amazonaws.com
+  tags:
+  - '#DescribeProtection'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-shield-describeprotection-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/waf/latest/developerguide/shield-chapter.html
+  - type: Pricing
+    url: https://aws.amazon.com/shield/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/shield/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/shield/faqs/
+- aid: amazon-shield:amazon-shield-describesubscription-api
+  name: 'Amazon Shield #DescribeSubscription API'
+  description: >-
+    The #DescribeSubscription API from Amazon Shield — 1 operation(s) for #describesubscription.
+  humanURL: https://aws.amazon.com/shield/
+  baseURL: https://shield.amazonaws.com
+  tags:
+  - '#DescribeSubscription'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-shield-describesubscription-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/waf/latest/developerguide/shield-chapter.html
+  - type: Pricing
+    url: https://aws.amazon.com/shield/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/shield/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/shield/faqs/
+- aid: amazon-shield:amazon-shield-listprotections-api
+  name: 'Amazon Shield #ListProtections API'
+  description: 'The #ListProtections API from Amazon Shield — 1 operation(s) for #listprotections.'
+  humanURL: https://aws.amazon.com/shield/
+  baseURL: https://shield.amazonaws.com
+  tags:
+  - '#ListProtections'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-shield-listprotections-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/waf/latest/developerguide/shield-chapter.html
+  - type: Pricing
+    url: https://aws.amazon.com/shield/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/shield/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/shield/faqs/
 common:
+  - type: PostmanWorkspace
+    url: https://www.postman.com/kinlaneapi/amazon-shield/overview
   - type: AgenticAccess
     url: agentic-access/amazon-shield-agentic-access.yml
   - type: TrustCenter

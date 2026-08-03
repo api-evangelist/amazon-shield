@@ -1,0 +1,26 @@
+{
+  "provider": "amazon-shield",
+  "sources": [
+    "amazon-shield-amazon-shield-rest-api-api-openapi.yml",
+    "amazon-shield-createprotectiongroup-api-openapi.yml",
+    "amazon-shield-createsubscription-api-openapi.yml",
+    "amazon-shield-describeattack-api-openapi.yml",
+    "amazon-shield-describeprotection-api-openapi.yml",
+    "amazon-shield-describesubscription-api-openapi.yml",
+    "amazon-shield-listprotections-api-openapi.yml"
+  ],
+  "outputs": [
+    "amazon-shield-amazon-shield-rest-api-api-openapi.yml",
+    "amazon-shield-createprotectiongroup-api-openapi.yml",
+    "amazon-shield-createsubscription-api-openapi.yml",
+    "amazon-shield-describeattack-api-openapi.yml",
+    "amazon-shield-describeprotection-api-openapi.yml",
+    "amazon-shield-describesubscription-api-openapi.yml",
+    "amazon-shield-listprotections-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

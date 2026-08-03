@@ -1,0 +1,127 @@
+{
+  "info": {
+    "_postman_id": "0775361a-2db6-4858-a049-acdf3d4cd4ab",
+    "name": "Amazon Shield REST Amazon Shield REST API #CreateProtectionGroup API",
+    "description": "AWS Shield is a managed DDoS protection service that safeguards applications running on AWS. This API enables management of DDoS protections, protection groups, subscriptions, attack details, and emergency engagement settings.\n\nContact Support:\n Name: AWS Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T00:52:40.000Z",
+    "updatedAt": "2026-07-28T00:52:41.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-0775361a-2db6-4858-a049-acdf3d4cd4ab"
+  },
+  "item": [
+    {
+      "name": "#CreateProtectionGroup",
+      "item": [
+        {
+          "name": "Amazon Shield Create Protection Group",
+          "id": "b0e9eeaf-0054-4103-958c-366185e24300",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"ProtectionGroupId\": \"<string>\",\n  \"Aggregation\": \"MEAN\",\n  \"Pattern\": \"ARBITRARY\",\n  \"ResourceType\": \"CLOUDFRONT_DISTRIBUTION\",\n  \"Members\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/#CreateProtectionGroup",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "hash": "CreateProtectionGroup"
+            },
+            "description": "Creates a grouping of protected resources so they can be handled as a collective."
+          },
+          "response": [
+            {
+              "id": "7c282f1d-4ffc-4be2-afbe-c6a44027f17f",
+              "name": "Successful response",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-amz-json-1.1"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ProtectionGroupId\": \"<string>\",\n  \"Aggregation\": \"MEAN\",\n  \"Pattern\": \"ARBITRARY\",\n  \"ResourceType\": \"CLOUDFRONT_DISTRIBUTION\",\n  \"Members\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#CreateProtectionGroup",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "CreateProtectionGroup"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:52:41.000Z",
+              "updatedAt": "2026-07-28T00:52:41.000Z",
+              "uid": "35240-7c282f1d-4ffc-4be2-afbe-c6a44027f17f"
+            }
+          ],
+          "createdAt": "2026-07-28T00:52:41.000Z",
+          "updatedAt": "2026-07-28T00:52:41.000Z",
+          "uid": "35240-b0e9eeaf-0054-4103-958c-366185e24300"
+        }
+      ],
+      "id": "e42739c9-8d77-4a1d-98db-7f98f4d9ae11",
+      "createdAt": "2026-07-28T00:52:41.000Z",
+      "updatedAt": "2026-07-28T00:52:41.000Z",
+      "uid": "35240-e42739c9-8d77-4a1d-98db-7f98f4d9ae11"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://shield.us-east-1.amazonaws.com"
+    }
+  ]
+}

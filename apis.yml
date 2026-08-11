@@ -287,7 +287,7 @@ common:
   - type: Vocabulary
     url: vocabulary/amazon-shield-vocabulary.yaml
   - type: OpenAPI
-    url: openapi/amazon-shield-api-openapi.yml
+    url: openapi/_original/amazon-shield-api-openapi.yml
   - type: Integrations
     url: https://aws.amazon.com/partners/
 integrations:

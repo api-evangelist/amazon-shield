@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon Shield REST Amazon Shield REST API API",
+    "version": "2016-06-02"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Amazon Shield REST API",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Shield Create Protection",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://shield.us-east-1.amazonaws.com/",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Enables AWS Shield Advanced for a specific AWS resource."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

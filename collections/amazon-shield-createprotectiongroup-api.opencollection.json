@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon Shield REST Amazon Shield REST API #CreateProtectionGroup API",
+    "version": "2016-06-02"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "#CreateProtectionGroup",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Shield Create Protection Group",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://shield.us-east-1.amazonaws.com/#CreateProtectionGroup",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a grouping of protected resources so they can be handled as a collective."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

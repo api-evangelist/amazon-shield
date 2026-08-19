@@ -1,0 +1,37 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon Shield REST Amazon Shield REST API #DescribeSubscription API",
+    "version": "2016-06-02"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "#DescribeSubscription",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Shield Describe Subscription",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://shield.us-east-1.amazonaws.com/#DescribeSubscription"
+          },
+          "docs": "Provides details about the AWS Shield Advanced subscription for an account."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

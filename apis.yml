@@ -4,6 +4,18 @@ description: >-
   on AWS. It provides always-on detection and automatic inline mitigations that minimize application downtime and
   latency, with two tiers of protection - Shield Standard for automatic defense against common attacks and Shield
   Advanced for enhanced detection and 24/7 access to the DDoS Response Team.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 specificationVersion: '0.23'
 accessModel:
   pricing: freemium

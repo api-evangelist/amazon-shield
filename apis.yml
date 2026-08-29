@@ -165,6 +165,9 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/shield/faqs/
 common:
+  - type: CapabilityMap
+    url: capabilities/amazon-shield-capability-edges.yml
+    name: Amazon Shield Business Capability Map
   - type: PostmanWorkspace
     url: https://www.postman.com/kinlaneapi/amazon-shield/overview
   - type: AgenticAccess

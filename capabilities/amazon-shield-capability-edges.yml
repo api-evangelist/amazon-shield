@@ -1,0 +1,24 @@
+slug: amazon-shield
+provider: Amazon Shield
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Telecommunications
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 1
+edges:
+- tag: '#DescribeAttack'
+  spec_file: amazon-shield-describeattack-api-openapi.yml
+  capability_id: BC-620.30
+  capability_id_l1: BC-620
+  capability_name: Threat Detection & Response Management
+  confidence: 0.78
+  evidence: 'schemas: AttackDetail, DescribeAttackResponse, SummarizedCounter, Mitigation — "attack details"'
+  reason: Operation returns details of a detected DDoS attack and the mitigations applied, which is threat
+    detection and response activity.

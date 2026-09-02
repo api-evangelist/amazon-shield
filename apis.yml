@@ -324,3 +324,5 @@ tags:
   - DDoS Protection
   - Networking
   - Security
+x-parent: aws
+x-relationship: product

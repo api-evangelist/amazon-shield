@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: 'Amazon Shield REST Amazon Shield REST API #CreateSubscription API'
+  title: 'Amazon Shield REST Amazon Shield REST API #CreateSubscription #Create Subscription #Create Subscription API'
   description: AWS Shield is a managed DDoS protection service that safeguards applications running on AWS. This API enables management of DDoS protections, protection groups, subscriptions, attack details, and emergency engagement settings.
   version: '2016-06-02'
   contact:

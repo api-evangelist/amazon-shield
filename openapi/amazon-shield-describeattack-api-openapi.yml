@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: 'Amazon Shield REST Amazon Shield REST API #DescribeAttack #Describe Attack #Describe Attack API'
+  title: 'Amazon Shield REST #Describe Attack API'
   description: AWS Shield is a managed DDoS protection service that safeguards applications running on AWS. This API enables management of DDoS protections, protection groups, subscriptions, attack details, and emergency engagement settings.
   version: '2016-06-02'
   contact:
@@ -43,6 +43,38 @@ paths:
       - '#DescribeAttack'
 components:
   schemas:
+    DescribeAttackRequest:
+      type: object
+      required:
+      - AttackId
+      properties:
+        AttackId:
+          type: string
+    Mitigation:
+      type: object
+      properties:
+        MitigationName:
+          type: string
+    DescribeAttackResponse:
+      type: object
+      properties:
+        Attack:
+          $ref: '#/components/schemas/AttackDetail'
+    SummarizedCounter:
+      type: object
+      properties:
+        Name:
+          type: string
+        Max:
+          type: number
+        Average:
+          type: number
+        Sum:
+          type: number
+        N:
+          type: integer
+        Unit:
+          type: string
     AttackDetail:
       type: object
       properties:
@@ -64,38 +96,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Mitigation'
-    DescribeAttackResponse:
-      type: object
-      properties:
-        Attack:
-          $ref: '#/components/schemas/AttackDetail'
-    DescribeAttackRequest:
-      type: object
-      required:
-      - AttackId
-      properties:
-        AttackId:
-          type: string
-    SummarizedCounter:
-      type: object
-      properties:
-        Name:
-          type: string
-        Max:
-          type: number
-        Average:
-          type: number
-        Sum:
-          type: number
-        N:
-          type: integer
-        Unit:
-          type: string
-    Mitigation:
-      type: object
-      properties:
-        MitigationName:
-          type: string
   securitySchemes:
     sigv4:
       type: apiKey

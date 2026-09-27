@@ -4,23 +4,26 @@
     "_original/amazon-shield-api-openapi.yml"
   ],
   "outputs": [
-    "amazon-shield-createprotectiongroup-api-openapi.yml",
-    "amazon-shield-createsubscription-api-openapi.yml",
-    "amazon-shield-describeattack-api-openapi.yml",
-    "amazon-shield-describeprotection-api-openapi.yml",
-    "amazon-shield-describesubscription-api-openapi.yml",
-    "amazon-shield-listprotections-api-openapi.yml",
     "amazon-shield-amazon-shield-rest-api-api-openapi.yml"
   ],
-  "archived": [],
+  "archived": [
+    "deleted 6 superseded output(s) from the previous generation"
+  ],
   "errors": [],
   "warnings": [],
   "notes": [
     "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
     "amazon-shield-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "amazon-shield-api-openapi.yml: tagged paths POST / -> Amazon Shield REST API",
+    "amazon-shield-api-openapi.yml: tagged paths POST /#ListProtections -> Amazon Shield REST API",
+    "amazon-shield-api-openapi.yml: tagged paths POST /#DescribeProtection -> Amazon Shield REST API",
+    "amazon-shield-api-openapi.yml: tagged paths POST /#DescribeAttack -> Amazon Shield REST API",
+    "amazon-shield-api-openapi.yml: tagged paths POST /#CreateSubscription -> Amazon Shield REST API",
+    "amazon-shield-api-openapi.yml: tagged paths POST /#DescribeSubscription -> Amazon Shield REST API",
+    "amazon-shield-api-openapi.yml: tagged paths POST /#CreateProtectionGroup -> Amazon Shield REST API",
     "amazon-shield-api-openapi.yml: declared missing tag: Amazon Shield REST API",
-    "apis.yml register: already-registered"
+    "superseded outputs removed: amazon-shield-createprotectiongroup-api-openapi.yml, amazon-shield-createsubscription-api-openapi.yml, amazon-shield-describeattack-api-openapi.yml, amazon-shield-describeprotection-api-openapi.yml, amazon-shield-describesubscription-api-openapi.yml \u2026",
+    "apis.yml register: written (+0 apis, 1 total)"
   ],
   "skipped": [
     "amazon-shield-amazon-shield-rest-api-api-openapi.yml: previously refined output, superseded by openapi/_original/",

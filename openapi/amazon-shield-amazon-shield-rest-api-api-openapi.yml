@@ -144,6 +144,28 @@ paths:
       - Amazon Shield REST API
 components:
   schemas:
+    Protection:
+      type: object
+      properties:
+        Id:
+          type: string
+        Name:
+          type: string
+        ResourceArn:
+          type: string
+        HealthCheckIds:
+          type: array
+          items:
+            type: string
+        ProtectionArn:
+          type: string
+    DescribeProtectionRequest:
+      type: object
+      properties:
+        ProtectionId:
+          type: string
+        ResourceArn:
+          type: string
     ListProtectionsRequest:
       type: object
       properties:
@@ -151,6 +173,37 @@ components:
           type: string
         MaxResults:
           type: integer
+    CreateProtectionResponse:
+      type: object
+      properties:
+        ProtectionId:
+          type: string
+    Mitigation:
+      type: object
+      properties:
+        MitigationName:
+          type: string
+    AttackDetail:
+      type: object
+      properties:
+        AttackId:
+          type: string
+        ResourceArn:
+          type: string
+        StartTime:
+          type: string
+          format: date-time
+        EndTime:
+          type: string
+          format: date-time
+        AttackCounters:
+          type: array
+          items:
+            $ref: '#/components/schemas/SummarizedCounter'
+        Mitigations:
+          type: array
+          items:
+            $ref: '#/components/schemas/Mitigation'
     CreateProtectionRequest:
       type: object
       required:
@@ -165,15 +218,11 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Tag'
-    ListProtectionsResponse:
+    DescribeProtectionResponse:
       type: object
       properties:
-        Protections:
-          type: array
-          items:
-            $ref: '#/components/schemas/Protection'
-        NextToken:
-          type: string
+        Protection:
+          $ref: '#/components/schemas/Protection'
     CreateProtectionGroupRequest:
       type: object
       required:
@@ -208,30 +257,11 @@ components:
           type: array
           items:
             type: string
-    CreateProtectionResponse:
+    DescribeAttackResponse:
       type: object
       properties:
-        ProtectionId:
-          type: string
-    Tag:
-      type: object
-      properties:
-        Key:
-          type: string
-        Value:
-          type: string
-    DescribeProtectionRequest:
-      type: object
-      properties:
-        ProtectionId:
-          type: string
-        ResourceArn:
-          type: string
-    DescribeProtectionResponse:
-      type: object
-      properties:
-        Protection:
-          $ref: '#/components/schemas/Protection'
+        Attack:
+          $ref: '#/components/schemas/AttackDetail'
     DescribeAttackRequest:
       type: object
       required:
@@ -239,26 +269,15 @@ components:
       properties:
         AttackId:
           type: string
-    Protection:
+    ListProtectionsResponse:
       type: object
       properties:
-        Id:
-          type: string
-        Name:
-          type: string
-        ResourceArn:
-          type: string
-        HealthCheckIds:
+        Protections:
           type: array
           items:
-            type: string
-        ProtectionArn:
+            $ref: '#/components/schemas/Protection'
+        NextToken:
           type: string
-    DescribeAttackResponse:
-      type: object
-      properties:
-        Attack:
-          $ref: '#/components/schemas/AttackDetail'
     SummarizedCounter:
       type: object
       properties:
@@ -274,32 +293,13 @@ components:
           type: integer
         Unit:
           type: string
-    Mitigation:
+    Tag:
       type: object
       properties:
-        MitigationName:
+        Key:
           type: string
-    AttackDetail:
-      type: object
-      properties:
-        AttackId:
+        Value:
           type: string
-        ResourceArn:
-          type: string
-        StartTime:
-          type: string
-          format: date-time
-        EndTime:
-          type: string
-          format: date-time
-        AttackCounters:
-          type: array
-          items:
-            $ref: '#/components/schemas/SummarizedCounter'
-        Mitigations:
-          type: array
-          items:
-            $ref: '#/components/schemas/Mitigation'
   securitySchemes:
     sigv4:
       type: apiKey

@@ -6,9 +6,7 @@
   "outputs": [
     "amazon-shield-amazon-shield-rest-api-api-openapi.yml"
   ],
-  "archived": [
-    "deleted 6 superseded output(s) from the previous generation"
-  ],
+  "archived": [],
   "errors": [],
   "warnings": [],
   "notes": [
@@ -22,16 +20,9 @@
     "amazon-shield-api-openapi.yml: tagged paths POST /#DescribeSubscription -> Amazon Shield REST API",
     "amazon-shield-api-openapi.yml: tagged paths POST /#CreateProtectionGroup -> Amazon Shield REST API",
     "amazon-shield-api-openapi.yml: declared missing tag: Amazon Shield REST API",
-    "superseded outputs removed: amazon-shield-createprotectiongroup-api-openapi.yml, amazon-shield-createsubscription-api-openapi.yml, amazon-shield-describeattack-api-openapi.yml, amazon-shield-describeprotection-api-openapi.yml, amazon-shield-describesubscription-api-openapi.yml \u2026",
-    "apis.yml register: written (+0 apis, 1 total)"
+    "apis.yml register: already-registered"
   ],
   "skipped": [
-    "amazon-shield-amazon-shield-rest-api-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-shield-createprotectiongroup-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-shield-createsubscription-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-shield-describeattack-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-shield-describeprotection-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-shield-describesubscription-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-shield-listprotections-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+    "amazon-shield-amazon-shield-rest-api-api-openapi.yml: previously refined output, superseded by openapi/_original/"
   ]
 }

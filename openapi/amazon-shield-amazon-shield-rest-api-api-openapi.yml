@@ -144,28 +144,6 @@ paths:
       - Amazon Shield REST API
 components:
   schemas:
-    Protection:
-      type: object
-      properties:
-        Id:
-          type: string
-        Name:
-          type: string
-        ResourceArn:
-          type: string
-        HealthCheckIds:
-          type: array
-          items:
-            type: string
-        ProtectionArn:
-          type: string
-    DescribeProtectionRequest:
-      type: object
-      properties:
-        ProtectionId:
-          type: string
-        ResourceArn:
-          type: string
     ListProtectionsRequest:
       type: object
       properties:
@@ -173,15 +151,17 @@ components:
           type: string
         MaxResults:
           type: integer
-    CreateProtectionResponse:
-      type: object
-      properties:
-        ProtectionId:
-          type: string
     Mitigation:
       type: object
       properties:
         MitigationName:
+          type: string
+    DescribeProtectionRequest:
+      type: object
+      properties:
+        ProtectionId:
+          type: string
+        ResourceArn:
           type: string
     AttackDetail:
       type: object
@@ -204,25 +184,15 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Mitigation'
-    CreateProtectionRequest:
+    ListProtectionsResponse:
       type: object
-      required:
-      - Name
-      - ResourceArn
       properties:
-        Name:
-          type: string
-        ResourceArn:
-          type: string
-        Tags:
+        Protections:
           type: array
           items:
-            $ref: '#/components/schemas/Tag'
-    DescribeProtectionResponse:
-      type: object
-      properties:
-        Protection:
-          $ref: '#/components/schemas/Protection'
+            $ref: '#/components/schemas/Protection'
+        NextToken:
+          type: string
     CreateProtectionGroupRequest:
       type: object
       required:
@@ -257,11 +227,6 @@ components:
           type: array
           items:
             type: string
-    DescribeAttackResponse:
-      type: object
-      properties:
-        Attack:
-          $ref: '#/components/schemas/AttackDetail'
     DescribeAttackRequest:
       type: object
       required:
@@ -269,15 +234,38 @@ components:
       properties:
         AttackId:
           type: string
-    ListProtectionsResponse:
+    Tag:
       type: object
       properties:
-        Protections:
+        Key:
+          type: string
+        Value:
+          type: string
+    Protection:
+      type: object
+      properties:
+        Id:
+          type: string
+        Name:
+          type: string
+        ResourceArn:
+          type: string
+        HealthCheckIds:
           type: array
           items:
-            $ref: '#/components/schemas/Protection'
-        NextToken:
+            type: string
+        ProtectionArn:
           type: string
+    DescribeAttackResponse:
+      type: object
+      properties:
+        Attack:
+          $ref: '#/components/schemas/AttackDetail'
+    DescribeProtectionResponse:
+      type: object
+      properties:
+        Protection:
+          $ref: '#/components/schemas/Protection'
     SummarizedCounter:
       type: object
       properties:
@@ -293,12 +281,24 @@ components:
           type: integer
         Unit:
           type: string
-    Tag:
+    CreateProtectionRequest:
+      type: object
+      required:
+      - Name
+      - ResourceArn
+      properties:
+        Name:
+          type: string
+        ResourceArn:
+          type: string
+        Tags:
+          type: array
+          items:
+            $ref: '#/components/schemas/Tag'
+    CreateProtectionResponse:
       type: object
       properties:
-        Key:
-          type: string
-        Value:
+        ProtectionId:
           type: string
   securitySchemes:
     sigv4:

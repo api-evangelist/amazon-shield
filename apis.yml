@@ -56,6 +56,12 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/shield/faqs/
 common:
+- type: Plans
+  url: plans/amazon-shield-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/amazon-shield-rate-limits.yml
+- type: FinOps
+  url: finops/amazon-shield-finops.yml
 - type: Website
   url: https://aws.amazon.com/shield/
 - type: CapabilityMap

@@ -1,4 +1,4 @@
-# Amazon Shield (amazon-shield)
+# Amazon Shield
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,112 +66,220 @@
 
 AWS Shield is a managed Distributed Denial of Service (DDoS) protection service that safeguards applications running on AWS. It provides always-on detection and automatic inline mitigations that minimize application downtime and latency, with two tiers of protection - Shield Standard for automatic defense against common attacks and Shield Advanced for enhanced detection and 24/7 access to the DDoS Response Team.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/amazon-shield/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/amazon-shield/refs/heads/main/apis.yml)
+**Areas:** AWS · DDoS Protection · Networking · Security
 
-## Tags
+## Amazon Shield on APIs.io
 
-- AWS
-- DDoS Protection
-- Networking
-- Security
+Everything profiled for Amazon Shield is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/amazon-shield/](https://apis.io/providers/amazon-shield/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (5)
 
-- **Created:** 2024-01-15
-- **Modified:** 2026-05-19
+- [Amazon Shield Amazon Shield REST API](https://apis.io/apis/amazon-shield/amazon-shield-amazon-shield-rest-api-api/) — The Amazon Shield REST API API from Amazon Shield — 1 operation(s) for amazon shield rest api.
+- [Amazon Shield Shield Application Layer Automatic Response API](https://apis.io/apis/amazon-shield/amazon-shield-application-layer-automatic-response-api/) — The Shield Application Layer Automatic Response API from Amazon Shield — 3 operation(s) for shield application layer automatic response.
+- [Amazon Shield Shield Operations API](https://apis.io/apis/amazon-shield/amazon-shield-operations-api/) — The Shield Operations API from Amazon Shield — 19 operation(s) for shield operations.
+- [Amazon Shield Shield Protection Group API](https://apis.io/apis/amazon-shield/amazon-shield-protection-group-api/) — The Shield Protection Group API from Amazon Shield — 4 operation(s) for shield protection group.
+- [Amazon Shield Shield Resource API](https://apis.io/apis/amazon-shield/amazon-shield-resource-api/) — The Shield Resource API from Amazon Shield — 3 operation(s) for shield resource.
 
-## APIs
+### Published properties
 
-### AWS Shield API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-The AWS Shield API provides programmatic access to manage DDoS protection for your AWS resources. It enables developers to create and manage protections, subscribe to Shield Advanced, configure emergency contacts, view attack details and statistics, and manage protection groups for coordinated defense across multiple resources.
+#### Agentic access (1)
 
-- **Human URL:** [https://aws.amazon.com/shield/](https://aws.amazon.com/shield/)
-- **Base URL:** `https://shield.amazonaws.com`
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags
+- [Amazon Shield Agentic Access](https://apis.io/agentic-access/amazon-shield/amazon-shield-agentic-access/)
 
-- AWS
-- DDoS Protection
-- Networking
-- Security
+#### JSON Schema (15)
 
-#### Properties
+The data models the API reads and writes.
 
+- [AttackDetail](https://apis.io/schemas/amazon-shield/amazon-shield-api-attack-detail/)
+- [CreateProtectionGroupRequest](https://apis.io/schemas/amazon-shield/amazon-shield-api-create-protection-group-request/)
+- [CreateProtectionRequest](https://apis.io/schemas/amazon-shield/amazon-shield-api-create-protection-request/)
+- [CreateProtectionResponse](https://apis.io/schemas/amazon-shield/amazon-shield-api-create-protection-response/)
+- [DescribeAttackRequest](https://apis.io/schemas/amazon-shield/amazon-shield-api-describe-attack-request/)
+- [DescribeAttackResponse](https://apis.io/schemas/amazon-shield/amazon-shield-api-describe-attack-response/)
+- [DescribeProtectionRequest](https://apis.io/schemas/amazon-shield/amazon-shield-api-describe-protection-request/)
+- [DescribeProtectionResponse](https://apis.io/schemas/amazon-shield/amazon-shield-api-describe-protection-response/)
+- [ListProtectionsRequest](https://apis.io/schemas/amazon-shield/amazon-shield-api-list-protections-request/)
+- [ListProtectionsResponse](https://apis.io/schemas/amazon-shield/amazon-shield-api-list-protections-response/)
+- [Mitigation](https://apis.io/schemas/amazon-shield/amazon-shield-api-mitigation/)
+- [Protection](https://apis.io/schemas/amazon-shield/amazon-shield-api-protection/)
+- [SummarizedCounter](https://apis.io/schemas/amazon-shield/amazon-shield-api-summarized-counter/)
+- [Tag](https://apis.io/schemas/amazon-shield/amazon-shield-api-tag/)
+- [Amazon Shield Protection](https://apis.io/schemas/amazon-shield/amazon-shield-protection/)
+
+#### JSON Structure (15)
+
+Data models expressed in JSON Structure.
+
+- [Amazon Shield Api Attack Detail Structure](https://apis.io/json-structure/amazon-shield/amazon-shield-api-attack-detail-structure/)
+- [Amazon Shield Api Create Protection Group Request Structure](https://apis.io/json-structure/amazon-shield/amazon-shield-api-create-protection-group-request-structure/)
+- [Amazon Shield Api Create Protection Request Structure](https://apis.io/json-structure/amazon-shield/amazon-shield-api-create-protection-request-structure/)
+- [Amazon Shield Api Create Protection Response Structure](https://apis.io/json-structure/amazon-shield/amazon-shield-api-create-protection-response-structure/)
+- [Amazon Shield Api Describe Attack Request Structure](https://apis.io/json-structure/amazon-shield/amazon-shield-api-describe-attack-request-structure/)
+- [Amazon Shield Api Describe Attack Response Structure](https://apis.io/json-structure/amazon-shield/amazon-shield-api-describe-attack-response-structure/)
+- [Amazon Shield Api Describe Protection Request Structure](https://apis.io/json-structure/amazon-shield/amazon-shield-api-describe-protection-request-structure/)
+- [Amazon Shield Api Describe Protection Response Structure](https://apis.io/json-structure/amazon-shield/amazon-shield-api-describe-protection-response-structure/)
+- [Amazon Shield Api List Protections Request Structure](https://apis.io/json-structure/amazon-shield/amazon-shield-api-list-protections-request-structure/)
+- [Amazon Shield Api List Protections Response Structure](https://apis.io/json-structure/amazon-shield/amazon-shield-api-list-protections-response-structure/)
+- [Amazon Shield Api Mitigation Structure](https://apis.io/json-structure/amazon-shield/amazon-shield-api-mitigation-structure/)
+- [Amazon Shield Api Protection Structure](https://apis.io/json-structure/amazon-shield/amazon-shield-api-protection-structure/)
+- [Amazon Shield Api Summarized Counter Structure](https://apis.io/json-structure/amazon-shield/amazon-shield-api-summarized-counter-structure/)
+- [Amazon Shield Api Tag Structure](https://apis.io/json-structure/amazon-shield/amazon-shield-api-tag-structure/)
+- [Amazon Shield Protection Structure](https://apis.io/json-structure/amazon-shield/amazon-shield-protection-structure/)
+
+#### JSON-LD (2)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Amazon Shield Context](https://apis.io/jsonld/amazon-shield/amazon-shield-context/)
+- [Amazon Shield Context](https://apis.io/jsonld/amazon-shield/amazon-shield-context-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Amazon Shield Vocabulary](https://apis.io/vocabularies/amazon-shield/amazon-shield-vocabulary/)
+
+#### Examples (15)
+
+Example requests and responses.
+
+- [Amazon Shield Api Attack Detail Example](https://apis.io/examples/amazon-shield/amazon-shield-api-attack-detail-example/)
+- [Amazon Shield Api Create Protection Group Request Example](https://apis.io/examples/amazon-shield/amazon-shield-api-create-protection-group-request-example/)
+- [Amazon Shield Api Create Protection Request Example](https://apis.io/examples/amazon-shield/amazon-shield-api-create-protection-request-example/)
+- [Amazon Shield Api Create Protection Response Example](https://apis.io/examples/amazon-shield/amazon-shield-api-create-protection-response-example/)
+- [Amazon Shield Api Describe Attack Request Example](https://apis.io/examples/amazon-shield/amazon-shield-api-describe-attack-request-example/)
+- [Amazon Shield Api Describe Attack Response Example](https://apis.io/examples/amazon-shield/amazon-shield-api-describe-attack-response-example/)
+- [Amazon Shield Api Describe Protection Request Example](https://apis.io/examples/amazon-shield/amazon-shield-api-describe-protection-request-example/)
+- [Amazon Shield Api Describe Protection Response Example](https://apis.io/examples/amazon-shield/amazon-shield-api-describe-protection-response-example/)
+- [Amazon Shield Api List Protections Request Example](https://apis.io/examples/amazon-shield/amazon-shield-api-list-protections-request-example/)
+- [Amazon Shield Api List Protections Response Example](https://apis.io/examples/amazon-shield/amazon-shield-api-list-protections-response-example/)
+- [Amazon Shield Api Mitigation Example](https://apis.io/examples/amazon-shield/amazon-shield-api-mitigation-example/)
+- [Amazon Shield Api Protection Example](https://apis.io/examples/amazon-shield/amazon-shield-api-protection-example/)
+- [Amazon Shield Api Summarized Counter Example](https://apis.io/examples/amazon-shield/amazon-shield-api-summarized-counter-example/)
+- [Amazon Shield Api Tag Example](https://apis.io/examples/amazon-shield/amazon-shield-api-tag-example/)
+- [Amazon Shield Protection Example](https://apis.io/examples/amazon-shield/amazon-shield-protection-example/)
+
+#### Collections (15)
+
+Postman and Open Collection request collections.
+
+- [Amazon Shield REST Amazon Shield REST API API](https://apis.io/collections/amazon-shield/open-amazon-shield-amazon-shield-rest-api-api/)
+- [Amazon Shield REST API](https://apis.io/collections/amazon-shield/open-amazon-shield-api/)
+- [Amazon Shield REST Amazon Shield REST API #CreateProtectionGroup API](https://apis.io/collections/amazon-shield/open-amazon-shield-createprotectiongroup-api/)
+- [Amazon Shield REST Amazon Shield REST API #CreateSubscription API](https://apis.io/collections/amazon-shield/open-amazon-shield-createsubscription-api/)
+- [Amazon Shield REST Amazon Shield REST API #DescribeAttack API](https://apis.io/collections/amazon-shield/open-amazon-shield-describeattack-api/)
+- [Amazon Shield REST Amazon Shield REST API #DescribeProtection API](https://apis.io/collections/amazon-shield/open-amazon-shield-describeprotection-api/)
+- [Amazon Shield REST Amazon Shield REST API #DescribeSubscription API](https://apis.io/collections/amazon-shield/open-amazon-shield-describesubscription-api/)
+- [Amazon Shield REST Amazon Shield REST API #ListProtections API](https://apis.io/collections/amazon-shield/open-amazon-shield-listprotections-api/)
+- [Amazon Shield REST Amazon Shield REST API API](https://apis.io/collections/amazon-shield/postman-amazon-shield-amazon-shield-rest-api-api/)
+- [Amazon Shield REST Amazon Shield REST API #CreateProtectionGroup API](https://apis.io/collections/amazon-shield/postman-amazon-shield-createprotectiongroup-api/)
+- [Amazon Shield REST Amazon Shield REST API #CreateSubscription API](https://apis.io/collections/amazon-shield/postman-amazon-shield-createsubscription-api/)
+- [Amazon Shield REST Amazon Shield REST API #DescribeAttack API](https://apis.io/collections/amazon-shield/postman-amazon-shield-describeattack-api/)
+- [Amazon Shield REST Amazon Shield REST API #DescribeProtection API](https://apis.io/collections/amazon-shield/postman-amazon-shield-describeprotection-api/)
+- [Amazon Shield REST Amazon Shield REST API #DescribeSubscription API](https://apis.io/collections/amazon-shield/postman-amazon-shield-describesubscription-api/)
+- [Amazon Shield REST Amazon Shield REST API #ListProtections API](https://apis.io/collections/amazon-shield/postman-amazon-shield-listprotections-api/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Amazon Shield — jsonschema rules](https://apis.io/rules/amazon-shield/amazon-shield-jsonschema-spectral-rules/)
+- [Amazon Shield API Rules](https://apis.io/rules/amazon-shield/amazon-shield-spectral-rules/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Amazon Shield Authentication](https://apis.io/security/amazon-shield/amazon-shield-authentication/)
+- [Amazon Shield Domain Security](https://apis.io/security/amazon-shield/amazon-shield-domain-security/)
+- [Amazon Shield Trust Center](https://apis.io/security/amazon-shield/amazon-shield-trust-center/)
+- [Amazon Shield Vulnerability Disclosure](https://apis.io/security/amazon-shield/amazon-shield-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Amazon Shield Plans Pricing](https://apis.io/plans/amazon-shield/amazon-shield-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Amazon Shield Rate Limits](https://apis.io/rate-limits/amazon-shield/amazon-shield-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Amazon Shield Finops](https://apis.io/finops/amazon-shield/amazon-shield-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://aws.amazon.com/shield/)
 - [Documentation](https://docs.aws.amazon.com/waf/latest/developerguide/shield-chapter.html)
-- [OpenAPI](openapi/amazon-shield-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Pricing](https://aws.amazon.com/shield/pricing/)
-- [Getting Started](https://aws.amazon.com/shield/getting-started/)
-- [F A Q](https://aws.amazon.com/shield/faqs/)
-
-## Common Properties
-
-- [Portal](https://aws.amazon.com/)
-- [Portal](https://aws.amazon.com/shield/)
-- [Documentation](https://docs.aws.amazon.com/waf/latest/developerguide/shield-chapter.html)
-- [Terms of Service](https://aws.amazon.com/service-terms/)
-- [Privacy Policy](https://aws.amazon.com/privacy/)
 - [Support](https://aws.amazon.com/premiumsupport/)
-- [GitHub Organization](https://github.com/aws)
-- [Portal](https://console.aws.amazon.com/wafv2/shieldv2)
-- [Sign Up](https://signin.aws.amazon.com/signup?request_type=register)
-- [Login](https://aws.amazon.com/console/)
-- [Status Page](https://health.aws.amazon.com/health/status)
-- [Contact](https://aws.amazon.com/contact-us/)
-- [JSON-LD](json-ld/amazon-shield-context-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [JSON-LD](json-ld/amazon-shield-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [JSON Schema](json-schema/amazon-shield-api-attack-detail-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/amazon-shield-api-create-protection-group-request-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/amazon-shield-api-create-protection-request-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/amazon-shield-api-create-protection-response-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/amazon-shield-api-describe-attack-request-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/amazon-shield-api-describe-attack-response-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/amazon-shield-api-describe-protection-request-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/amazon-shield-api-describe-protection-response-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/amazon-shield-api-list-protections-request-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/amazon-shield-api-list-protections-response-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/amazon-shield-api-mitigation-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/amazon-shield-api-protection-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/amazon-shield-api-summarized-counter-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/amazon-shield-api-tag-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/amazon-shield-protection-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Structure](json-structure/amazon-shield-api-attack-detail-structure.json)
-- [JSON Structure](json-structure/amazon-shield-api-create-protection-group-request-structure.json)
-- [JSON Structure](json-structure/amazon-shield-api-create-protection-request-structure.json)
-- [JSON Structure](json-structure/amazon-shield-api-create-protection-response-structure.json)
-- [JSON Structure](json-structure/amazon-shield-api-describe-attack-request-structure.json)
-- [JSON Structure](json-structure/amazon-shield-api-describe-attack-response-structure.json)
-- [JSON Structure](json-structure/amazon-shield-api-describe-protection-request-structure.json)
-- [JSON Structure](json-structure/amazon-shield-api-describe-protection-response-structure.json)
-- [JSON Structure](json-structure/amazon-shield-api-list-protections-request-structure.json)
-- [JSON Structure](json-structure/amazon-shield-api-list-protections-response-structure.json)
-- [JSON Structure](json-structure/amazon-shield-api-mitigation-structure.json)
-- [JSON Structure](json-structure/amazon-shield-api-protection-structure.json)
-- [JSON Structure](json-structure/amazon-shield-api-summarized-counter-structure.json)
-- [JSON Structure](json-structure/amazon-shield-api-tag-structure.json)
-- [JSON Structure](json-structure/amazon-shield-protection-structure.json)
-- [Example](examples/amazon-shield-api-attack-detail-example.json)
-- [Example](examples/amazon-shield-api-create-protection-group-request-example.json)
-- [Example](examples/amazon-shield-api-create-protection-request-example.json)
-- [Example](examples/amazon-shield-api-create-protection-response-example.json)
-- [Example](examples/amazon-shield-api-describe-attack-request-example.json)
-- [Example](examples/amazon-shield-api-describe-attack-response-example.json)
-- [Example](examples/amazon-shield-api-describe-protection-request-example.json)
-- [Example](examples/amazon-shield-api-describe-protection-response-example.json)
-- [Example](examples/amazon-shield-api-list-protections-request-example.json)
-- [Example](examples/amazon-shield-api-list-protections-response-example.json)
-- [Example](examples/amazon-shield-api-mitigation-example.json)
-- [Example](examples/amazon-shield-api-protection-example.json)
-- [Example](examples/amazon-shield-api-summarized-counter-example.json)
-- [Example](examples/amazon-shield-api-tag-example.json)
-- [Example](examples/amazon-shield-protection-example.json)
-- [Spectral Rules](rules/amazon-shield-spectral-rules.yml)
-- [Vocabulary](vocabulary/amazon-shield-vocabulary.yaml)
-- [OpenAPI](openapi/amazon-shield-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Integrations](https://aws.amazon.com/partners/)
+- [Terms of service](https://aws.amazon.com/service-terms/)
+- [Privacy policy](https://aws.amazon.com/privacy/)
+- [GitHub](https://github.com/aws)
+- [Status](https://health.aws.amazon.com/health/status)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
-**URL:** https://apievangelist.com
+**Kin Score 52.0** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 61.6 |
+| Contract governance | 27.3 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 48.8 |
+| Access clarity | 53.9 |
+
+**Agent readiness 20.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 35.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/amazon-shield/](https://apis.io/providers/amazon-shield/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Amazon Shield: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/amazon-shield/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).

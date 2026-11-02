@@ -1,0 +1,83 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-28'
+method: searched
+source: https://aws.amazon.com/shield/pricing/
+sources:
+- https://aws.amazon.com/shield/pricing/
+provenance:
+  tool: engine/economics/harvest_pricing.py
+  run: 20261028T161713
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: tiered-subscription
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-28'
+  managed_tier: AWS Shield Advanced
+published: true
+note: Many prices on the page render as unresolved template tokens (e.g. {priceOf!shield/shield!Advanced!Monthly!Fee});
+  numeric values captured come from the pricing examples and the CloudFront/Global Accelerator data transfer
+  table.
+plan_count: 3
+currency: USD
+plans:
+- name: AWS Shield Standard
+  price_text: No additional cost
+  currency: USD
+  period: none
+  included_quota: Protection from common, most frequently occurring network and transport layer DDoS events;
+    does not include AWS Shield network security director
+- name: AWS Shield Advanced
+  price_text: AWS Shield Advanced monthly fee of $3,000
+  price: 3000
+  currency: USD
+  period: month
+  unit: per payer account
+  included_quota: Up to 50 billion AWS WAF requests per subscribed payer ID per calendar month; 1-year
+    subscription commitment
+  overage: Requests beyond 50 billion billed per million requests (e.g. $0.15/ million requests; $0.20
+    per million requests for 2000 WCUs); data transfer out usage fees apply
+- name: AWS Shield Advanced Data Transfer Out - Amazon CloudFront / AWS Global Accelerator, First 100
+    TB
+  price_text: $0.025
+  price: 0.025
+  currency: USD
+  period: per-use
+  unit: per GB
+  overage: Next 400 TB $0.02; Next 500 TB $0.015; Next 4 PB $0.01; Above 5 PB Contact Us
+rate_limit_statements:
+- you will get up to 50 billion requests per subscribed payer ID to AWS Shield protected WAF resources
+  in a calendar month
+- WebACLs with default (1,500) WCU limits
+x-canonical:
+  generated: '2026-11-01'
+  vocabulary: engine/economics/plans-canonical.yml
+  models:
+  - hybrid
+  units:
+  - data
+  plans:
+  - name: AWS Shield Standard
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods:
+    - none
+  - name: AWS Shield Advanced
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - other
+    periods:
+    - month
+  - name: AWS Shield Advanced Data Transfer Out - Amazon CloudFront / AWS Global Accelerat
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - data
+    periods:
+    - other

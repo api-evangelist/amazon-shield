@@ -2,6 +2,7 @@
 generated: '2026-10-28'
 method: searched
 source: https://aws.amazon.com/shield/pricing/
+name: Amazon Shield API Plans
 sources:
 - https://aws.amazon.com/shield/pricing/
 provenance:
@@ -51,7 +52,7 @@ rate_limit_statements:
   in a calendar month
 - WebACLs with default (1,500) WCU limits
 x-canonical:
-  generated: '2026-11-06'
+  generated: '2026-11-13'
   vocabulary: engine/economics/plans-canonical.yml
   models:
   - hybrid

@@ -1,9 +1,9 @@
 name: Amazon Shield
-description: AWS Shield is a managed Distributed Denial of Service (DDoS) protection service that safeguards
-  applications running on AWS. It provides always-on detection and automatic inline mitigations that minimize
-  application downtime and latency, with two tiers of protection - Shield Standard for automatic defense
-  against common attacks and Shield Advanced for enhanced detection and 24/7 access to the DDoS Response
-  Team.
+
+description: AWS Shield is a managed Distributed Denial of Service (DDoS) protection service that safeguards applications running on AWS. It provides
+  always-on detection and automatic inline mitigations that minimize application downtime and latency, with two tiers of protection - Shield Standard
+  for automatic defense against common attacks and Shield Advanced for enhanced detection and 24/7 access to the DDoS Response Team.
+
 deliveryModel:
   model: saas
   open_source: false
@@ -16,7 +16,9 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+
 specificationVersion: '0.23'
+
 accessModel:
   pricing: paid
   onboarding: unknown
@@ -29,76 +31,79 @@ accessModel:
   - plans
   - authentication
   - security
-  generated: '2026-11-06'
+  generated: '2026-11-13'
   method: derived
 image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+
 url: https://raw.githubusercontent.com/api-evangelist/amazon-shield/refs/heads/main/apis.yml
+
 created: '2024-01-15'
+
 modified: '2026-09-16'
-apis:
-- aid: amazon-shield:amazon-shield-amazon-shield-rest-api-api
-  name: Amazon Shield Amazon Shield REST API
-  description: >-
-    The Amazon Shield REST API API from Amazon Shield — 1 operation(s) for amazon shield rest api.
-  humanURL: https://aws.amazon.com/shield/
-  baseURL: https://shield.amazonaws.com
-  tags:
-  - Amazon Shield REST API
-  properties:
-  - type: OpenAPI
-    url: openapi/amazon-shield-amazon-shield-rest-api-api-openapi.yml
-  - type: Documentation
-    url: https://docs.aws.amazon.com/waf/latest/developerguide/shield-chapter.html
-  - type: Pricing
-    url: https://aws.amazon.com/shield/pricing/
-  - type: GettingStarted
-    url: https://aws.amazon.com/shield/getting-started/
-  - type: FAQ
-    url: https://aws.amazon.com/shield/faqs/
-- aid: amazon-shield:amazon-shield-application-layer-automatic-response-api
-  name: Amazon Shield Shield Application Layer Automatic Response API
-  description: >-
-    The Shield Application Layer Automatic Response API from Amazon Shield — 3 operation(s) for shield
-    application layer automatic response.
-  humanURL: https://aws.amazon.com/shield/
-  baseURL: https://shield.amazonaws.com
-  tags:
-  - Shield Application Layer Automatic Response
-  properties:
-  - type: OpenAPI
-    url: openapi/amazon-shield-application-layer-automatic-response-api-openapi.yml
-- aid: amazon-shield:amazon-shield-operations-api
-  name: Amazon Shield Shield Operations API
-  description: The Shield Operations API from Amazon Shield — 19 operation(s) for shield operations.
-  humanURL: https://aws.amazon.com/shield/
-  baseURL: https://shield.amazonaws.com
-  tags:
-  - Shield Operations
-  properties:
-  - type: OpenAPI
-    url: openapi/amazon-shield-operations-api-openapi.yml
-- aid: amazon-shield:amazon-shield-protection-group-api
-  name: Amazon Shield Shield Protection Group API
-  description: >-
-    The Shield Protection Group API from Amazon Shield — 4 operation(s) for shield protection group.
-  humanURL: https://aws.amazon.com/shield/
-  baseURL: https://shield.amazonaws.com
-  tags:
-  - Shield Protection Group
-  properties:
-  - type: OpenAPI
-    url: openapi/amazon-shield-protection-group-api-openapi.yml
-- aid: amazon-shield:amazon-shield-resource-api
-  name: Amazon Shield Shield Resource API
-  description: The Shield Resource API from Amazon Shield — 3 operation(s) for shield resource.
-  humanURL: https://aws.amazon.com/shield/
-  baseURL: https://shield.amazonaws.com
-  tags:
-  - Shield Resource
-  properties:
-  - type: OpenAPI
-    url: openapi/amazon-shield-resource-api-openapi.yml
+
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+  url: https://apievangelist.com
+
+tags:
+- Amazon Web Services
+- DDoS Protection
+- Networking
+- Security
+tags_raw:
+- AWS
+- DDoS Protection
+- Networking
+- Security
+
 common:
+- type: Spectral
+  url: rules/amazon-shield-spectral-rules.yml
+- type: Spectral
+  url: rules/amazon-shield-rules.yml
+- type: Spectral
+  url: rules/amazon-shield-jsonschema-spectral-rules.yml
+- type: Vocabulary
+  url: vocabulary/amazon-shield-vocabulary.yml
+- type: DataModel
+  url: data-model/amazon-shield-data-model.yml
+- type: CLI
+  url: cli/amazon-shield-cli.yml
+- type: Conventions
+  url: conventions/amazon-shield-conventions.yml
+- type: Compliance
+  url: https://aws.amazon.com/compliance/
+- type: Deprecation
+  url: lifecycle/amazon-shield-lifecycle.yml
+- type: Lifecycle
+  url: lifecycle/amazon-shield-lifecycle.yml
+- type: ErrorCatalog
+  url: errors/amazon-shield-problem-types.yml
+- type: Conformance
+  url: conformance/amazon-shield-conformance.yml
+- type: LLMsTxt
+  url: llms/amazon-shield-llms.txt
+- type: SecurityTxt
+  url: well-known/amazon-shield-security.txt
+- type: WellKnown
+  url: well-known/amazon-shield-well-known.yml
+- type: Hosts
+  url: hosts/amazon-shield-hosts.yml
+- type: Vendors
+  url: vendors/amazon-shield-vendors.yml
+- type: SDKs
+  url: packages/amazon-shield-packages.yml
+- type: Packages
+  url: packages/amazon-shield-packages.yml
+- type: Security
+  url: https://aws.amazon.com/security/?nc2=h_dsc_aa_sec
+- type: Sandbox
+  url: https://console.aws.amazon.com/console/home/?nc2=h_si&src=header-signin
+- type: Newsroom
+  url: https://aws.amazon.com/media/?nc2=h_sol_ind_med
+- type: GettingStarted
+  url: https://developer.amazon.com/frustration-free-setup
 - type: Plans
   url: plans/amazon-shield-plans-pricing.yml
 - type: RateLimits
@@ -245,9 +250,141 @@ common:
 - type: Vocabulary
   url: vocabulary/amazon-shield-vocabulary.yaml
 - type: OpenAPI
-  url: openapi/_original/amazon-shield-api-openapi.yml
+  url: openapi/_superseded/amazon-shield-api-openapi.yml
 - type: Integrations
   url: https://aws.amazon.com/partners/
+- type: UsageTerms
+  url: terms/amazon-shield-terms-of-service.yml
+- type: DataProcessing
+  url: privacy/amazon-shield-privacy-policy.yml
+- type: Attestations
+  url: compliance/amazon-shield-compliance.yml
+- type: Eligibility
+  url: eligibility/amazon-shield-eligibility.yml
+- type: AIPreferences
+  url: ai-preferences/amazon-shield-ai-preferences.yml
+
+apis:
+- aid: amazon-shield:amazon-shield-amazon-shield-rest-api-api
+  name: Amazon Shield Amazon Shield REST API
+  description: The Amazon Shield REST API API from Amazon Shield — 1 operation(s) for amazon shield rest api.
+  humanURL: https://aws.amazon.com/shield/
+  baseURL: https://shield.amazonaws.com
+  tags:
+  - Amazon Shield REST API
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-shield-amazon-shield-rest-api-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/waf/latest/developerguide/shield-chapter.html
+  - type: Pricing
+    url: https://aws.amazon.com/shield/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/shield/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/shield/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-shield-create-protection-group-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-shield-list-protections-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-shield-create-protection-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-shield-list-protections-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-shield-describe-protection-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-shield-create-protection-response-schema.json
+- aid: amazon-shield:amazon-shield-application-layer-automatic-response-api
+  name: Amazon Shield Shield Application Layer Automatic Response API
+  description: The Shield Application Layer Automatic Response API from Amazon Shield — 3 operation(s) for shield application layer automatic
+    response.
+  humanURL: https://aws.amazon.com/shield/
+  baseURL: https://shield.amazonaws.com
+  tags:
+  - Shield Application Layer Automatic Response
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-shield-application-layer-automatic-response-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-shield-enable-application-layer-automatic-response-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-shield-update-application-layer-automatic-response-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-shield-disable-application-layer-automatic-response-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-shield-disable-application-layer-automatic-response-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-shield-enable-application-layer-automatic-response-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-shield-update-application-layer-automatic-response-response-schema.json
+- aid: amazon-shield:amazon-shield-operations-api
+  name: Amazon Shield Shield Operations API
+  description: The Shield Operations API from Amazon Shield — 19 operation(s) for shield operations.
+  humanURL: https://aws.amazon.com/shield/
+  baseURL: https://shield.amazonaws.com
+  tags:
+  - Shield Operations
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-shield-operations-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-shield-list-attacks-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-shield-list-attacks-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-shield-associate-proactive-engagement-details-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-shield-update-subscription-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-shield-update-emergency-contact-settings-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-shield-associate-drtrole-request-schema.json
+- aid: amazon-shield:amazon-shield-protection-group-api
+  name: Amazon Shield Shield Protection Group API
+  description: The Shield Protection Group API from Amazon Shield — 4 operation(s) for shield protection group.
+  humanURL: https://aws.amazon.com/shield/
+  baseURL: https://shield.amazonaws.com
+  tags:
+  - Shield Protection Group
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-shield-protection-group-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-shield-create-protection-group-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-shield-update-protection-group-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-shield-list-protection-groups-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-shield-list-protection-groups-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-shield-delete-protection-group-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-shield-describe-protection-group-request-schema.json
+- aid: amazon-shield:amazon-shield-resource-api
+  name: Amazon Shield Shield Resource API
+  description: The Shield Resource API from Amazon Shield — 3 operation(s) for shield resource.
+  humanURL: https://aws.amazon.com/shield/
+  baseURL: https://shield.amazonaws.com
+  tags:
+  - Shield Resource
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-shield-resource-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-shield-list-resources-in-protection-group-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-shield-list-resources-in-protection-group-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-shield-tag-resource-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-shield-untag-resource-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-shield-tag-resource-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-shield-untag-resource-response-schema.json
+
 integrations:
 - name: Partner Programs
 - name: Resources
@@ -257,19 +394,12 @@ integrations:
 - name: AWS Partner Central
 - name: Partner Paths
 - name: co-sell with AWS
-maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
-  url: https://apievangelist.com
-tags:
-- Amazon Web Services
-- DDoS Protection
-- Networking
-- Security
-tags_raw:
-- AWS
-- DDoS Protection
-- Networking
-- Security
+
 x-parent: amazon-web-services
+
 x-relationship: product
+x-enrichment:
+  date: '2026-11-11'
+  status: enriched
+  artifacts_added: 4
+  pass: local-v6

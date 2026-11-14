@@ -5,12 +5,21 @@ artifacts:
   agentic-access/amazon-shield-agentic-access.yml:
     method: generated
     evidence: declared in the artifact
+  ai-preferences/amazon-shield-ai-preferences.yml:
+    method: harvested
+    evidence: declared in the artifact
   authentication/amazon-shield-authentication.yml:
     method: derived
     evidence: declared in the artifact
   capabilities/amazon-shield-capability-edges.yml:
     method: unknown
     evidence: no authorship recorded
+  certification/status.yml:
+    method: unknown
+    evidence: no authorship recorded
+  cli/amazon-shield-cli.yml:
+    method: searched
+    evidence: declared in the artifact
   collections/amazon-shield-amazon-shield-rest-api-api.opencollection.json:
     method: derived
     evidence: openapi/amazon-shield-amazon-shield-rest-api-api
@@ -59,6 +68,24 @@ artifacts:
   collections/amazon-shield-listprotections-api.postman_collection.json:
     method: unknown
     evidence: no authorship recorded
+  compliance/amazon-shield-compliance.yml:
+    method: harvested
+    evidence: declared in the artifact
+  conformance/amazon-shield-conformance.yml:
+    method: derived
+    evidence: declared in the artifact
+  conventions/amazon-shield-conventions.yml:
+    method: derived
+    evidence: declared in the artifact
+  data-model/amazon-shield-data-model.yml:
+    method: derived
+    evidence: declared in the artifact
+  eligibility/amazon-shield-eligibility.yml:
+    method: harvested
+    evidence: declared in the artifact
+  errors/amazon-shield-problem-types.yml:
+    method: derived
+    evidence: declared in the artifact
   examples/amazon-shield-api-attack-detail-example.json:
     method: unknown
     evidence: no authorship recorded
@@ -110,6 +137,9 @@ artifacts:
   front-door-ai/2026-09-17.yml:
     method: unknown
     evidence: no authorship recorded
+  hosts/amazon-shield-hosts.yml:
+    method: derived
+    evidence: declared in the artifact
   integrations/_index.yml:
     method: generated
     evidence: carries an API Evangelist house phrase
@@ -164,7 +194,94 @@ artifacts:
   json-schema/amazon-shield-api-tag-schema.json:
     method: unknown
     evidence: no authorship recorded
+  json-schema/amazon-shield-associate-drtrole-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-shield-associate-proactive-engagement-details-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-shield-create-protection-group-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-shield-create-protection-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-shield-create-protection-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-shield-delete-protection-group-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-shield-describe-protection-group-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-shield-describe-protection-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-shield-disable-application-layer-automatic-response-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-shield-disable-application-layer-automatic-response-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-shield-enable-application-layer-automatic-response-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-shield-enable-application-layer-automatic-response-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-shield-list-attacks-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-shield-list-attacks-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-shield-list-protection-groups-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-shield-list-protection-groups-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-shield-list-protections-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-shield-list-protections-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-shield-list-resources-in-protection-group-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-shield-list-resources-in-protection-group-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
   json-schema/amazon-shield-protection-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-shield-tag-resource-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-shield-tag-resource-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-shield-untag-resource-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-shield-untag-resource-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-shield-update-application-layer-automatic-response-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-shield-update-application-layer-automatic-response-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-shield-update-emergency-contact-settings-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-shield-update-protection-group-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-shield-update-subscription-request-schema.json:
     method: unknown
     evidence: no authorship recorded
   json-structure/amazon-shield-api-attack-detail-structure.json:
@@ -215,7 +332,7 @@ artifacts:
   kin/checks-2026-10-23T222754.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
-  kin/checks-2026-11-02T082323.yml:
+  kin/checks-2026-11-06T143934.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-09-23T000603.yml:
@@ -284,10 +401,21 @@ artifacts:
   kin/score-2026-11-02T082323.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
-  openapi/_original/amazon-shield-api-openapi.yml:
-    method: harvested
-    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
-      to the provider's source is unverified
+  kin/score-2026-11-06T143934.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  lifecycle/amazon-shield-lifecycle.yml:
+    method: derived
+    evidence: declared in the artifact
+  llms/amazon-shield-llms-provenance.yml:
+    method: unknown
+    evidence: no authorship recorded
+  llms/amazon-shield-llms.txt:
+    method: unknown
+    evidence: no authorship recorded
+  mcp/amazon-shield-mcp.yml:
+    method: derived
+    evidence: declared in the artifact
   openapi/amazon-shield-amazon-shield-rest-api-api-openapi.yml:
     method: unknown
     evidence: no authorship recorded
@@ -303,6 +431,12 @@ artifacts:
   openapi/amazon-shield-resource-api-openapi.yml:
     method: unknown
     evidence: no authorship recorded
+  packages/amazon-shield-packages.yml:
+    method: searched
+    evidence: declared in the artifact
+  patterns/amazon-shield-patterns.yml:
+    method: derived
+    evidence: declared in the artifact
   plans/amazon-shield-plans-pricing.yml:
     method: searched
     evidence: declared in the artifact
@@ -330,10 +464,16 @@ artifacts:
   postman/amazon-shield-listprotections-api.postman_collection.json:
     method: unknown
     evidence: no authorship recorded
+  privacy/amazon-shield-privacy-policy.yml:
+    method: harvested
+    evidence: declared in the artifact
   rate-limits/amazon-shield-rate-limits.yml:
     method: generated
     evidence: declared in the artifact
   rules/amazon-shield-jsonschema-spectral-rules.yml:
+    method: generated
+    evidence: declared in the artifact
+  rules/amazon-shield-rules.yml:
     method: generated
     evidence: declared in the artifact
   rules/amazon-shield-spectral-rules.yml:
@@ -352,8 +492,27 @@ artifacts:
     method: generated
     evidence: declared in the artifact
   smithy/shield-2016-06-02.json:
+    method: harvested
+    evidence: byte-identical to https://raw.githubusercontent.com/aws/api-models-aws/3cd98287b471c106254abd89279cc87308d38bfd/models/shield/service/2016-06-02/shield-2016-06-02.json
+      (sha256 8cec0c155e30, fetched 2026-11-11T21:15:30+00:00)
+  terms/amazon-shield-terms-of-service.yml:
+    method: harvested
+    evidence: declared in the artifact
+  vendors/amazon-shield-vendors.yml:
     method: unknown
     evidence: no authorship recorded
   vocabulary/amazon-shield-vocabulary.yaml:
+    method: unknown
+    evidence: no authorship recorded
+  vocabulary/amazon-shield-vocabulary.yml:
+    method: derived
+    evidence: declared in the artifact
+  well-known/amazon-shield-midway-auth-openid-configuration.json:
+    method: unknown
+    evidence: no authorship recorded
+  well-known/amazon-shield-security.txt:
+    method: unknown
+    evidence: no authorship recorded
+  well-known/amazon-shield-well-known.yml:
     method: unknown
     evidence: no authorship recorded
